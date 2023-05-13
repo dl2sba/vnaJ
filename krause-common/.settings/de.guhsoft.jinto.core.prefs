@@ -1,0 +1,2 @@
+de.guhsoft.jinto.core.accessorConfiguration=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<root>\r\n<resourceBundleReference resourceBundleName\="krause.common.resources.messages">\r\n<accessor typeName\="krause.common.resources.CommonMessages">\r\n<methodReference methodName\="getString">\r\n<parameter index\="0" isSelected\="true" parameterName\="key" parameterType\="java.lang.String"/>\r\n</methodReference>\r\n</accessor>\r\n</resourceBundleReference>\r\n</root>
+eclipse.preferences.version=1

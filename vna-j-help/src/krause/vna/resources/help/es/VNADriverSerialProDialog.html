@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#EFEFEF">
+    <h2>
+      Campos de sólo lectura
+    </h2>
+    <h3>
+      Pérdida
+    </h3>
+    <p>
+      Aquí se muestran los valores técnicos mínimo y máximo para la transmisión y pérdida de retorno.
+    </p>
+    <h3>
+      Fase
+    </h3>
+    <p>
+      Aquí se muestran los valores técnicos mínimo y máximo para la fase.
+    </p>
+    <h3>
+      Información del firmware
+    </h3>
+    <p>
+      Si el analizador está conectado y configurado para el puerto de comunicación correcto, se muestra la versión 
+	  de firmware interna. En caso contrario se muestra un mensaje de error.
+    </p>
+    <h3>
+      Estado de energía
+    </h3>
+    <p>
+      Si el analizador está conectado y configurado para el puerto de comunicación correcto, se muestra el voltaje 
+	  actual de la batería interna.
+    </p>
+    <h2>
+      Campos editables
+    </h2>
+    <h3>
+      #pasos de calibración
+    </h3>
+    <p>
+      Determina el número de pasos que se utilizan durante la creación de los datos de calibración. Un valor de 2,000 da 
+	  para la mayor parte de la utilización con buenos resultados. La resolución de un paso de calibración es el rango de 
+	  exploración de 100 kHz a 200 MHz dividido por 2.000.
+    </p>
+    <p>
+      Incrementar este número se traduce en una gama de frecuencias más pequeña por cada punto de calibración. 
+	  Aumentar el número de puntos de calibración sólo ralentiza la creación de datos de calibración, no las 
+	  exploraciones periódicas.
+    </p>
+    <h3>
+      DDS ticks por MHz
+    </h3>
+    <p>
+      El valor introducido aquí depende de la frecuencia de reloj interno DDS de los analizadores. Sólo un número
+	  muy pequeño de analizadores tienen un DDS de 500 MHz. Todos analizadores posteriores tienen un DDS de 520MHz.
+	  La frecuencia DDS está por lo general en la parte trasera, en la etiqueta del analizador.
+    </p>
+    <p>
+      <img alt="Backside of analyzer" src="../images/ProLabel.jpg"/>
+    </p>
+    <ul>
+    <li>
+	  Para un DDS de 500 MHz use el valor 8589934
+    </li>
+    <li>
+	  Para un DDS de 520MHz use el valor 8259552.
+    </li>
+</ul>
+<p>
+  para una buena calibración de frecuencia utilice la función de calibración de frecuencia del vna/J.
+</p>
+    <h3>
+      Revisión de firmware
+    </h3>
+    <p>
+      Desde la versión 2.3 del firmware del miniVNApro, el analizador es compatible con cualquier ancho de escaneo.
+	  Antes de esta versión, los anchos de exploración debían ser un múltiplo de 100.
+	  Si el analizador tiene un firmware >= 2.3 (ver información en el campo Firmware info) marque la casilla de 
+	  verificación "> = 2.3".  
+    </p>
+    <p>
+		Desde la versión 2.3 del firmware del miniVNApro, también es posible reducir la potencia del generador en 
+		6 dB en el modo de transmisión, para superar el problema de potencia del generador demasiado alta. 
+		Esto reducirá el rango dinámico en el modo de transmisión de 6dB a aproximadamente 84dB. Si la casilla 
+		"Fija 6dB" está marcada, la potencia del generador se reduce en 6 dB. 
+		<em>Los archivos de calibración debe ser regenerados y no deben mezclarse con archivos regulares de 
+		calibración.</em>      
+    </p>
+<h3>
+  Tiempo de espera abierto
+</h3>
+<p>
+  El tiempo en milisegundos entre la petición de apertura a la interfaz y la respuesta de la interfaz. Si este tiempo
+  es excedido, se emite un error. Por lo general no debe cambiarse!
+</p>
+<h3>
+  Retardo de comando
+</h3>
+<p>
+  El tiempo en milisegundos entre el envio de comandos al analizador. Por lo general no debe cambiarse!
+</p>
+<h3>
+  Tiempo de espera de lectura
+</h3>
+<p>
+  El tiempo en milisegundos entre la solicitud de un comando al analizador y la respuesta del analizador. 
+  Si este tiempo se supera, se emite un error. Por lo general no debe cambiarse!
+</p>
+<h3>
+  Velocidad de transmisión
+</h3>
+<p>
+  La velocidad de transmisión usada para comunicar con el analizador. Por lo general no debe cambiarse!
+</p>
+<h3>
+  Resistencia de referencia
+</h3>
+<p>
+  Todos los cálculos internos se realizan usando la resistencia de referencia introducida. Puede ser un 
+  valor complejo con parte real e imaginaria. Por lo general, se introduce 50 + i0.
+</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="createServer" name="Create Runnable Jar for Project vna-j with Jar-in-Jar Loader">
+
+	<target name="createServer">
+
+		<loadproperties>
+			<file file="../vna-j/src/krause/vna/resources/VNAMessage.properties" />
+			<filterchain>
+				<linecontains>
+					<contains value="Application." />
+				</linecontains>
+			</filterchain>
+		</loadproperties>
+
+		<property name="targetDir" location="c:/temp/vnaJ.Server.${Application.version}" />
+		<property name="RXTXLib" location="../Java Comm Lib GNU 2.2pre2" />
+
+		<mkdir dir="${targetDir}" />
+		<copy todir="${targetDir}" file="${RXTXLib}/win32/rxtxSerial.dll" />
+		<copy todir="${targetDir}" file="${RXTXLib}/mac-10.5/librxtxSerial.jnilib" />
+		<copy tofile="${targetDir}/readme.${Application.version}.html" file="../vna-j/src/krause/vna/resources/readme.html" />
+
+		<jar destfile="${targetDir}/vnaJ.Server.${Application.version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader" />
+				<attribute name="Rsrc-Main-Class" value="krause.vna.net.server.VNAServerMain" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Rsrc-Class-Path" value="./ RXTXcomm.jar commons-lang-2.4.jar commons-math-2.0.jar" />
+			</manifest>
+			<fileset dir="../krause-common/bin" />
+			<fileset dir="../SwingWorker/bin" />
+			<fileset dir="../vna-j/bin" />
+			<fileset dir="../vna-j-server/bin" />
+			<fileset dir="../vna-j-minivna/bin" />
+			<fileset dir="../vna-j-minivna-net/bin" />
+			<fileset dir="../vna-j-minivnapro/bin" />
+			<fileset dir="../vna-j-minivnaproext/bin" />
+			<fileset dir="../vna-j-minivnapro-net/bin" />
+			<fileset dir="../vna-j-minivna-lf/bin" />
+			<fileset dir="../vna-j-sampledriver/bin" />
+			<fileset dir="../vna-j-sampledriver-net/bin" />
+			
+			<zipfileset src="jar-in-jar-loader.zip" />
+			<zipfileset dir="${RXTXLib}" includes="RXTXcomm.jar" />
+			<zipfileset dir="../Apache Commons/lib" includes="commons-lang-2.4.jar" />
+			<zipfileset dir="../Apache Commons/lib" includes="commons-math-2.0.jar" />
+		</jar>
+	</target>
+</project>

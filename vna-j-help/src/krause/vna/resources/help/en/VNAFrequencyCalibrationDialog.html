@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#CCFFFF">
+  <h1>Frequency calibration dialog</h1>
+  <p>The calibration can be done easily using a frequency counter connected to the DUT port.</p>
+  <p>Execute the following steps:</p>
+  <ol>
+  	<li><p>Open the frequency calibration dialog (menu CALIBRATION/FREQUENCY)</p></li> 
+	<li><p>Connect a frequency counter to the DUT (or the TX on the Extender) connector of the analyser.</p></li>
+	<li><p>Enter the desired calibration frequency in the input field. At startup, the half of the maximum frequency is preset. The frequency input field has the same behaviour as the start/stop fields in the main window.</p></li>
+	<li><p>Fine tune the frequency with the frequency digits in the TICKS group, until the entered frequency is displayed on the external frequency counter.</p></li>
+	<li><p>Close the dialog with the SAVE button.</li>
+   </ol>
+   <h2>Remark</h2>
+   <p>The number selected with the digit fields in the TICKS group has no direct relation to the calibration frequency. Basically this is the number of DDS ticks required to generate a signal of 1MHz</p>  
+   <h2>Remark</h2>
+   <p>The calibration value is stored for the selected analyzer type. This can be checked also in the driver information dialog.
+	When closing the application, the correction value is saved to the file system and will be reloaded whenever this driver is loaded.
+	If you get stuck somewhere during the frequency calibration, simply leave this dialog, open the driver info dialog, press there the RESET button and go back to the calibration dialog to start over.
+  </p>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" lang="de-de">
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#EFEFEF">
+    <h1>
+      Rechner für &Omega;sche Dämpfungsglieder
+    </h1>
+    <h2>
+      Benutzung
+    </h2>
+    <ol>
+      <li>
+      <p>
+        Geben Sie die gewünschet Dämpfung in das Feld
+        <em>
+          Attenuation
+        </em>
+        ein.
+      </p>
+    </li>
+    <li>
+    <p>
+      Geben Sie die gewünschte Eingangsimpedanz in das Feld
+      <em>
+        R1
+      </em>
+      ein.
+    </p>
+  </li>
+  <li>
+  <p>
+    Geben Sie die gewünschte Ausgangsimpedanz in das Feld
+    <em>
+      R2
+    </em>
+    ein.
+  </p>
+</li>
+<li>
+<p>
+  Geben Sie die Anzahl der gewünschten Einzelwiderstände je berechnetem Widerstand im Feld
+  <em>
+    Anz. Widerstände:
+  </em>
+  ein.
+</p>
+</li>
+<li>
+<p>
+  Um zwischen der Pi- und der T-Schaltung zu wechseln, nutzen Sie die Optionsschalter
+  <em>
+    Pi-Schaltung
+  </em>
+  bzw.
+  <em>
+    T-Schaltung
+  </em>
+  .
+</p>
+</li>
+</ol>
+<h2>
+  Rechenergebnis
+</h2>
+<p>
+  Die genau berechneten Werte für die Widerstände R3, R4 und R5 werden rechts den Eingabefeldern für die Widerstände R1
+  und R2 angezeigt.
+</p>
+<p>
+  In der Zeile
+  <em>
+    E12-Reihe
+  </em>
+  werden die mit dieser Widerstandsreihe erreichbaren Werte für R3, R4 und R5 angezeigt.
+</p>
+<p>
+  In der Zeile
+  <em>
+    E24-Reihe
+  </em>
+  werden die mit dieser Widerstandsreihe erreichbaren Werte für R3, R4 und R5 angezeigt.
+</p>
+<p>
+  In der Zeile
+  <em>
+    E48-Reihe
+  </em>
+  werden die mit dieser Widerstandsreihe erreichbaren Werte für R3, R4 und R5 angezeigt.
+</p>
+<p>
+  Für jede der Widerstandreihe werden die dann damit erreichbaren Eingangs- und Ausgangsimpedanzen angezeigt.
+</p>
+<h3>
+  Widerstandsberechnung
+</h3>
+<p>
+  Im Tooltip-Text für jeden berechneten Widerstand R3, R4 und R5 wird die nötige Serienschaltung aus Einzelwiderständen der jeweiligen Reihe angezeigt.
+</p>
+<p>
+  Beispiel:
+  <em>
+    Pi-Schaltung, Dämpfung=18dB, R1=400&Omega;, R2=50&Omega;, Anz. Widerstände=2
+  </em>
+</p>
+<ul>
+  <li>
+  Der genau Wert für R4 ist 552,77&Omega;.
+</li>
+<li>
+Für die E12-Reihe wird ein 470&Omega; Widerstand in Reihen mit einem 82&Omega; Widerstand vorgeschlagen.
+</li>
+<li>
+Für die E24-Reihe wird ein 510&Omega; Widerstand in Reihen mit einem 43&Omega; Widerstand vorgeschlagen.
+</li>
+<li>
+Für die E48-Reihe wird ein 536&Omega; Widerstand in Reihen mit einem 16.2&Omega; Widerstand vorgeschlagen.
+</li>
+</ul>
+<h2>
+  Grenzen
+</h2>
+<p>
+  Es können nicht beliebige Kombinationen aus Dämpfung, Eingangs- und Ausgangswiderstand berechnet werden.
+</p>
+<p>
+  Ist die Berechnung mit passiven Bauteilen nicht möglich, so werden negative Widerstandswerte angezeigt.
+</p>
+<p>
+  <img src="../images/PadCalcErr.jpg" alt="hm" />
+</p>
+<h2>
+  Samples
+</h2>
+<h3>
+  Pi-Schaltung
+</h3>
+<p>
+  <img src="../images/PadCalcPI.jpg" alt="hm" />
+</p>
+<h3>
+  T-Schaltung
+</h3>
+<p>
+  <img src="../images/PadCalcT.jpg" alt="hm" />
+</p>
+<h2>
+  Danksagung
+</h2>
+<p>
+  Die Berechnung basieren auf dem hervorragenden Beitrag von Ulrich Fleischmann, DL9LX im Deutschen CQ DL Magazin von 02.2011 auf den Seiten 115 und 166.
+</p>
+</body>
+</html>

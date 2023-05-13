@@ -1,0 +1,152 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h1>
+      Ayuda en ajustes de AUTO-Exportación
+    </h1>
+    <h2>
+      General
+    </h2>
+    <p>
+
+    </p>
+    <p>
+    </p>
+    <h2>
+      Fichero de salida
+    </h2>
+    <h3>
+      Campo de entrada de nombre de fichero
+    </h3>
+    <p>
+      Aqui puede introducir una plantilla para el nombre del fichero de los datos exportados.
+    </p>
+    <p>
+      Estas variables son soportadas:
+    </p>
+    <dl>
+      <dt>
+      {0}
+    </dt>
+    <dd>
+    Aqui es insertada la fecha/hora actuales.
+  </dd>
+  <dt>
+  {1}
+</dt>
+<dd>
+El modo seleccionado de exploración del analizador.
+</dd>
+<dt>
+{2}
+</dt>
+<dd>
+El nombre del analizador seleccionado.
+</dd>
+<dt>
+{3}
+</dt>
+<dd>
+El nombre largo del analizador seleccionado.
+</dd>
+<dt>
+{4}
+</dt>
+<dd>
+Frecuencia de comienzo de exploración. Se muestran los separadores de miles.
+</dd>
+<dt>
+{5}
+</dt>
+<dd>
+Frecuencia de parada de exploración. No se muestran los separadores.
+</dd>
+<dt>
+{6}
+</dt>
+<dd>
+Frecuencia de comienzo de exploración. Se muestran los separadores de miles.
+</dd>
+<dt>
+{7}
+</dt>
+<dd>
+Frecuencia de parada de exploración. No se muestran los separadores.
+</dd>
+<dt>
+{8}
+</dt>
+<dd>
+Número de muestras usadas en esta exploración.
+</dd>
+<dt>
+{9}
+</dt>
+<dd>
+El número de exploraciones usadas para generar los datos(Todavía no soportado).
+</dd>
+<dt>
+{10}
+</dt>
+<dd>
+El número de muestras en el conjunto de datos de calibración.
+</dd>
+<dt>
+{11}
+</dt>
+<dd>
+El número de exploraciones usadas para generar el conjunto de datos de calibración.
+</dd>
+<dt>
+{12}
+</dt>
+<dd>
+Nombre del conjunto de datos de calibración.
+</dd>
+<dt>
+{13}
+</dt>
+<dd>
+El nombre del usuario actual de la operación.
+</dd>
+
+</dl>
+<h3>
+  Casilla de verificación de sobreescritura
+</h3>
+<p>
+  Si los archivos de exportación ya existen y la casilla de verificación está seleccionada, el archivo existente se sobrescribe
+  automáticamente. Si la casilla de verificación no está seleccionada, se muestra un mensaje de advertencia.
+</p>
+<h3>
+  Botón de búsqueda
+</h3>
+<p>
+  Al hacer clic en los botones de búsqueda se abre un diálogo de selección directorio, en el que el usuario puede seleccionar 
+  el directorio para los archivos exportados.
+</p>
+<h2>
+  Cabecera
+</h2>
+<p>
+  Esta cabecera se imprime sobre el área de diagrama en formato JPG y en la exportación a PDF. Los parámetros de 
+  sustitución iguales que para los campos de nombre de archivo están soportados.
+</p>
+<h2>
+  Comentario
+</h2>
+<p>
+  Este comentario está impreso debajo del área de diagrama en el documento PDF exportado. Los parámetros de sustitución 
+  iguales que para los campos de nombre de archivo están soportados. El comentario se imprime con una fuente de tamaño fijo,
+  por lo que se puede formatear de forma fácil.
+</p>
+<h2>
+  Separador decimal
+</h2>
+<p>
+  Por lo general, el separador decimal se selecciona en base a los parámetros del sistema. Para la exportación de formato
+  parámetros-S, el separador decimal utilizado puede ser seleccionado aquí.
+</p>
+</body>
+</html>

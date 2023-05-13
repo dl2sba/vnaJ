@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#EFEFEF">
+    <h2>
+      Alleen lezen velden
+    </h2>
+    <h3>
+      Loss
+    </h3>
+    <p>
+      Hier worden de technische minimum en maximum waarden weergegeven voor de transmissie- en return-loss.
+    </p>
+    <h3>
+      Fase
+    </h3>
+    <p>
+      Hier worden de technische minimum en maximum waarden weergegeven voor de fase.
+    </p>
+    <h3>
+      Firmware info
+    </h3>
+    <p>
+      Als de analyser aangesloten en geconfigureerd is voor de juiste communicatiepoort zal de versie van de interne
+      firmware getoond worden. Anders wordt een foutbericht getoond.
+    </p>
+    <h3>
+      Voedingstatus
+    </h3>
+    <p>
+      Als de analyser aangesloten en geconfigureerd is voor de juiste communicationpoort zal de actuele spanning van de interne batterij getoond worden.
+    </p>
+    <h2>
+      Aanpasbare velden
+    </h2>
+    <h3>
+      #calibratiestappen
+    </h3>
+    <p>
+      Stelt het aantal te gebruiken stappen vast gedurende de creatie van de calibratidata. Een waarde van 2.000 geeft voor normaal gebruik
+      goede resultaten. De resolutie van een calibratiestap is het scanbereik van 100kHz tot 200MHz gedeeld door 2.000.
+    </p>
+    <p>
+      Verhoging van dit getal resulteert in een kleiner frequentiebereik per calibratiepunt. Verhoging van het aantal 
+      calibratiepunten vertraagt de aanmaak van de calibratiedata, niet die van de reguliere scans.
+    </p>
+    <h3>
+      DDS ticks per MHz
+    </h3>
+    <p>
+      De hier ingevoerde waarde is afhankelijk van de analyser zijn interne DDS klokfrequentie. Aleen een klein aantal 
+      analysers hebben een 500MHz DDS. Alle latere analysers hebben een 520MHz DDS. De DDS-frequentie wordt meestal op een label
+      op de achterkant van de analyser aangegeven.
+    </p>
+    <p>
+      <img alt="Backside of analyzer" src="../images/ProLabel.jpg"/>
+    </p>
+    <ul>
+      <li>
+      Gebruik de waarde 8589934 voor een 500MHz DDS. 
+    </li>
+    <li>
+    Gebruik de waarde 8259552 voor een 520MHz DDS.
+  </li>
+</ul>
+<p>
+  voor een fijne frequentiecalibratie dient u de frequentiecalibratiefunctie van vna/J te gebruiken.
+</p>
+    <h3>
+      Firmware revisie
+    </h3>
+    <p>
+      Vanaf de miniVNApro firmware versie 2.3 ondersteunt de analyser elke scanbreedte. 
+      Bij voorafgaande versies diende de scanbreedte een veelvoud van 100 te zijn.
+      Als uw analyser een firmware >= 2.3  heeft (zie info in het Firmware info-veld), dan dient de ">=2.3" checkbox aangevinkt te worden.  
+    </p>
+    <p>
+		Vanaf de miniVNApro firmware versie 2.3 is het tevens mogelijk het generatorvermogen 
+		in de transmissiemode met 6 dB te reduceren, dit om het probleem van teveel vermogen 
+		te voorkomen. Dit zal het dynamisch bereik  
+		in de transmissiemode met 6dB verminderen naar ongeveer 84dB.
+		Als de "Vast 6dB" box aangevinkt is zal het generatorvermogen met 6dB verminderd worden. 
+		<em>De calibratiebestanden moeten opnieuw gegenereerd en niet gemixt  
+		worden met de reguliere calibratiebestanden.</em>      
+    </p>
+<h3>
+  Open timeout
+</h3>
+<p>
+  De tijd in milliseconden tussen het open verzoek naar de interface en de reactie van de interface. Als deze tijd
+  overschreden wordt zal een foutmelding getoond worden. Deze hoeft normaal niet aangepast te worden!
+</p>
+<h3>
+  Command delay
+</h3>
+<p>
+  De tijd in milliseconden tussen de verstuurde commando's naar de analyser. Deze hoeft normaal niet aangepast te worden!
+</p>
+<h3>
+  Read timeout
+</h3>
+<p>
+  De tijd in milliseconden tussen het commandoverzoek naar de analyser en een antwoord van de analyzer. Als deze tijd wordt
+  overschreden zal er een foutmelding getoond worden. Deze hoeft normaal niet aangepast te worden!
+</p>
+<h3>
+  Baudrate
+</h3>
+<p>
+  De gebruikte baudrate om met de analyser te communiceren. Deze hoeft normaal niet aangepast te worden!
+</p>
+<h3>
+  Referentieweerstand
+</h3>
+<p>
+  Alle interne berekeningen worden uitgevoerd met de ingevoerde referentieweerstand. Dit kan een complexe waarde met echte en
+  imaginaire delen zijn. Vaak wordt hier alleen 50+i0 ingevoerd.
+</p>
+</body>
+</html>

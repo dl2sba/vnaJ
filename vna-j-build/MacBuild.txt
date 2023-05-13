@@ -1,0 +1,13 @@
+JAR erzeugen
+
+Mit dem JAR-Bundler eine App erzeugen
+	MainClass JarRsrcLoader
+
+Use Macintosh Menu Bar ankreuzen
+
+Mit dem PackageMaker ein Installationspaket bauen
+	App in den Content reinziehen
+	
+App mit Compress zippen damit sie hochgeladen werden kann
+
+	

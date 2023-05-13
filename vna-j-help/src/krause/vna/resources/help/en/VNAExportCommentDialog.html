@@ -1,0 +1,533 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      General
+    </h2>
+    <p>
+      Here the general parameters the headline and the comment field in the exported document can be edited.
+    </p>
+    <h2>
+      Headline
+    </h2>
+    <p>
+      This Headline is printed above the diagram area in JPG- and PDF-Export. The same replacement parameters as for the
+      filename fields are supported.
+    </p>
+    <h2>
+      Comment
+    </h2>
+    <p>
+      This comment is printed below the diagram area in the exported PDF-document. The same replacement parameters as
+      for the filename fields are supported. The comment is printed with a fixed-sized font, so simple formatting can be
+      used.
+    </p>
+    <h2>
+      Supported variables
+    </h2>
+    <p>
+      These variables are supported:
+    </p>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr>
+          <td>
+            {0}
+          </td>
+          <td>
+            The current date/time is inserted here. Further formatting of date/time is described in next chapter.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {1}
+          </td>
+          <td>
+            The currently selected scan mode of the analyzer.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {2}
+          </td>
+          <td>
+            The shortname of the selected analyzer.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {3}
+          </td>
+          <td>
+            The longname of the selected analyzer.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {4}
+          </td>
+          <td>
+            Start frequency of scan. Thousand separators are displayed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {5}
+          </td>
+          <td>
+            Stop frequency of scan. No separators are displayed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {6}
+          </td>
+          <td>
+            Start frequency of scan. Thousand separators are displayed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {7}
+          </td>
+          <td>
+            Stop frequency of scan. No separators are displayed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {8}
+          </td>
+          <td>
+            Number of samples used for this scan.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {9}
+          </td>
+          <td>
+            The number of scans used to generate data (not supported yet).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {10}
+          </td>
+          <td>
+            The number of samples in the calibration dataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {11}
+          </td>
+          <td>
+            The number of scans used to generate the calibration dataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {12}
+          </td>
+          <td>
+            Name if the calibration dataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {13}
+          </td>
+          <td>
+            The name of the currently logged on user in the operation.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>
+      Date formatting
+    </h2>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr bgcolor="#ccccff">
+          <th align=left>
+            Letter
+          </th>
+          <th align=left>
+            Date or Time Component
+          </th>
+          <th align=left>
+            Presentation
+          </th>
+          <th align=left>
+            Examples
+          </th>
+          <tr>
+            <td>
+              <code>
+                G
+              </code>
+            </td>
+            <td>
+              Era designator
+            </td>
+            <td>
+              Text
+            </td>
+            <td>
+              <code>
+                AD
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                y
+              </code>
+            </td>
+            <td>
+              Year
+            </td>
+            <td>
+              Year
+            </td>
+            <td>
+              <code>
+                1996
+              </code>
+              ;
+              <code>
+                96
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                M
+              </code>
+            </td>
+            <td>
+              Month in year
+            </td>
+            <td>
+              Month
+            </td>
+            <td>
+              <code>
+                July
+              </code>
+              ;
+              <code>
+                Jul
+              </code>
+              ;
+              <code>
+                07
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                w
+              </code>
+            </td>
+            <td>
+              Week in year
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                27
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                W
+              </code>
+            </td>
+            <td>
+              Week in month
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                D
+              </code>
+            </td>
+            <td>
+              Day in year
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                189
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                d
+              </code>
+            </td>
+            <td>
+              Day in month
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                10
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                F
+              </code>
+            </td>
+            <td>
+              Day of week in month
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                E
+              </code>
+            </td>
+            <td>
+              Day in week
+            </td>
+            <td>
+              Text
+            </td>
+            <td>
+              <code>
+                Tuesday
+              </code>
+              ;
+              <code>
+                Tue
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                a
+              </code>
+            </td>
+            <td>
+              Am/pm marker /
+            </td>
+            <td>
+              Text
+            </td>
+            <td>
+              <code>
+                PM
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              H
+            </td>
+            <td>
+              Hour in day (0-23)
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                k
+              </code>
+            </td>
+            <td>
+              Hour in day (1-24)
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                24
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                K
+              </code>
+            </td>
+            <td>
+              Hour in am/pm (0-11)
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                0
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                h
+              </code>
+            </td>
+            <td>
+              Hour in am/pm (1-12)
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                12
+              </code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>
+                m
+              </code>
+            </td>
+            <td>
+              Minute in hour
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                30
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                s
+              </code>
+            </td>
+            <td>
+              Second in minute
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                55
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                S
+              </code>
+            </td>
+            <td>
+              Millisecond
+            </td>
+            <td>
+              Number
+            </td>
+            <td>
+              <code>
+                978
+              </code>
+            </td>
+          </tr>
+
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                z
+              </code>
+            </td>
+            <td>
+              Time zone
+            </td>
+            <td>
+              General time zone
+            </td>
+            <td>
+              <code>
+                Pacific Standard Time
+              </code>
+              ;
+              <code>
+                PST
+              </code>
+              ;
+              <code>
+                GMT-08:00
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                Z
+              </code>
+            </td>
+            <td>
+              Time zone
+            </td>
+            <td>
+              RFC 822 time zone
+            </td>
+            <td>
+              <code>
+                -0800
+              </code>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </body>
+  </html>

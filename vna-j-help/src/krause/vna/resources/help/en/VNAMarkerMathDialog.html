@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      Usage
+    </h2>
+    <p>
+      This dialog can be used i.e. to tune an antenna filter to a given centre frequency and a defined band-width.
+    </p>
+    <p>
+      The marker-math dialog is bound to one of the markers. The data displayed in this dialog is the data of this
+      marker.
+    </p>
+    <h2>
+      Mode
+    </h2>
+    <p>
+      The mode used depends on the data at the selected cursor location.
+    </p>
+    <p>
+      If the data left and right of the cursor is lower, than
+      <b>
+        PEAK-mode
+      </b>
+      is selected.
+    </p>
+    <p>
+      If the data left and right of the cursor is higher, than
+      <b>
+        NOTCH-mode
+      </b>
+      is selected.
+    </p>
+    <h2>
+      Limit
+    </h2>
+    <p>
+      A limit in dB must be defined, which is used to search for the low- and high-limits.
+    </p>
+    <h2>
+      Return-/Transmission-Loss
+    </h2>
+    <p>
+      If the marker should use the Return-Loss scale, the RL-radio button must be selected.
+    </p>
+    <p>
+      If the marker should use the Transmission-Loss scale, the TL-radio button must be selected.
+    </p>
+    <h2>
+      Sample - tune a bandpass-filter
+    </h2>
+    <p>
+      Assume you want to tune a BP to a 6dB-bandwidth of 100kHz ...
+    </p>
+    <ol>
+      <li>
+      <p>
+        Set one of the markers to the desired center-frequency of the bandpass-filter
+      </p>
+    </li>
+    <li>
+    <p>
+      Enter 6 in the
+      <b>
+        Limit
+      </b>
+      field.
+    </p>
+  </li>
+  <li>
+  <p>
+    Now tune the filter until the desired bandwidth of 100kHz is displayed in the
+    <b>
+      Bandwidth-field
+    </b>
+    .
+  </p>
+</li>
+</ol>
+</body>
+</html>

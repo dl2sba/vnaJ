@@ -1,0 +1,579 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      General
+    </h2>
+    <p>
+      Aqui pueden establecerse los parámetros generales para la exportación de datos.
+    </p>
+    <h2>
+      Fichero de salida
+    </h2>
+    <h3>
+      Campo de entrada de nombre del fichero
+    </h3>
+    <p>
+      Aquí puede introducir una plantilla para el nombre de archivo de los datos exportados. Cualquier número de 
+	  variables puede ser insertado usando llaves, es decir {0} inserta la variable 0 en la cadena durante la exportación.
+	  Se admiten todas las variables de sustitución enumeradas mas adelante.
+    </p>
+    <h3>
+      Casilla de verificación de sobreescritura
+    </h3>
+    <p>
+      Si los archivos de exportación ya existen y la casilla de verificación está seleccionada, el archivo existente 
+	  se sobrescribe automáticamente.Si la casilla no está seleccionada, se muestra un mensaje de advertencia.
+    </p>
+    <h3>
+      Botón de búsqueda
+    </h3>
+    <p>
+      Al hacer clic en los botones de búsqueda se abre un diálogo de selección de directorio, en el que el usuario 
+	  puede seleccionar el directorio para los archivos exportados.
+    </p>
+    <h2>
+      Título
+    </h2>
+    <p>
+      Este título se imprime sobre el área de diagrama en la exportación de los formatos JPG y PDF. Están soportados 
+	  los parámetros de sustitución igual que para los campos de nombre de archivo.
+    </p>
+    <h2>
+      Comentario
+    </h2>
+    <p>
+      Este comentario está impreso debajo del área de diagrama en el documento exportado a PDF. Están soportados 
+	  los parámetros de sustitución igual que para los campos de nombre de archivo. El comentario se imprime con 
+	  una fuente de tamaño fijo, por lo que puede ser formateado de forma sencilla.
+    </p>
+    <h2>
+      Separador decimal
+    </h2>
+    <p>
+      Por lo general, el separador decimal se selecciona en base a los parámetros del sistema operativo. Para la 
+	  exportación del formato de parámetros-S, el separador decimal utilizado puede ser seleccionado aqui.
+    </p>
+    <h2>
+      Variables soportadas
+    </h2>
+    <p>
+      Estas variables son admitidas:
+    </p>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr>
+          <td>
+            {0}
+          </td>
+          <td>
+            La fecha/hora actual se inserta aquí. Además el formato de fecha/hora se describe en el siguiente capítulo.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {1}
+          </td>
+          <td>
+            El modo de exploracióon seleccionado en el analizador.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {2}
+          </td>
+          <td>
+            El nombre corto del analizador seleccionado.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {3}
+          </td>
+          <td>
+            El nombre largo del analizador seleccionado.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {4}
+          </td>
+          <td>
+            Frecuencia de arranque de exploración. Se muestran los separadores de miles.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {5}
+          </td>
+          <td>
+            Frecuencia de parada de exploración. No se muestran los separadores.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {6}
+          </td>
+          <td>
+            Frecuencia de arranque de exploración. Se muestran los separadores de miles.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {7}
+          </td>
+          <td>
+            Frecuencia de parada de exploración. No se muestran los separadores.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {8}
+          </td>
+          <td>
+            Número de muestras usadas para esta exploración.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {9}
+          </td>
+          <td>
+            El número de muestras usadas para generar los datos (todavía no soportado).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {10}
+          </td>
+          <td>
+            El número de muestras del conjunto de datos de calibración.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {11}
+          </td>
+          <td>
+            El número de exploraciones usadas para generar el conjunto de datos de calibración.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {12}
+          </td>
+          <td>
+            Nombre del conjunto de datos de calibración.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {13}
+          </td>
+          <td>
+            El nombre del usuario actual en la operación.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>
+      Formateando fechas
+    </h2>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr bgcolor="#ccccff">
+          <th align=left>
+            Letra
+          </th>
+          <th align=left>
+            Componente de fecha o hora
+          </th>
+          <th align=left>
+            Presentación
+          </th>
+          <th align=left>
+            Ejemplos
+          </th>
+          <tr>
+            <td>
+              <code>
+                G
+              </code>
+            </td>
+            <td>
+              Designador de Era
+            </td>
+            <td>
+              Texto
+            </td>
+            <td>
+              <code>
+                AD
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                y
+              </code>
+            </td>
+            <td>
+              Año
+            </td>
+            <td>
+              Año
+            </td>
+            <td>
+              <code>
+                1996
+              </code>
+              ;
+              <code>
+                96
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                M
+              </code>
+            </td>
+            <td>
+              Mes en el año
+            </td>
+            <td>
+              Mes
+            </td>
+            <td>
+              <code>
+                Julio
+              </code>
+              ;
+              <code>
+                Jul
+              </code>
+              ;
+              <code>
+                07
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                w
+              </code>
+            </td>
+            <td>
+              Semana en el año
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                27
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                W
+              </code>
+            </td>
+            <td>
+              Semana en el año
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                D
+              </code>
+            </td>
+            <td>
+              Día en el año
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                189
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                d
+              </code>
+            </td>
+            <td>
+              Día en el mes
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                10
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                F
+              </code>
+            </td>
+            <td>
+              Día de la semana en el mes
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                E
+              </code>
+            </td>
+            <td>
+              Día de la semana
+            </td>
+            <td>
+              Texto
+            </td>
+            <td>
+              <code>
+                Martes
+              </code>
+              ;
+              <code>
+                Tue
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                a
+              </code>
+            </td>
+            <td>
+              Marcador Am/Pm /
+            </td>
+            <td>
+              Texto
+            </td>
+            <td>
+              <code>
+                PM
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              H
+            </td>
+            <td>
+              Hora del día (0-23)
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                k
+              </code>
+            </td>
+            <td>
+              Hora en el día (1-24)
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                24
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                K
+              </code>
+            </td>
+            <td>
+              Hora en am/pm (0-11)
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                0
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                h
+              </code>
+            </td>
+            <td>
+              Hora en am/pm (1-12)
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                12
+              </code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>
+                m
+              </code>
+            </td>
+            <td>
+              Minuto en la hora
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                30
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                s
+              </code>
+            </td>
+            <td>
+              Segundo en el minuto
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                55
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                S
+              </code>
+            </td>
+            <td>
+              Milisegundo
+            </td>
+            <td>
+              Número
+            </td>
+            <td>
+              <code>
+                978
+              </code>
+            </td>
+          </tr>
+
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                z
+              </code>
+            </td>
+            <td>
+              Zona horaria
+            </td>
+            <td>
+              Zona horaria general
+            </td>
+            <td>
+              <code>
+                Horario standar del pacífico
+              </code>
+              ;
+              <code>
+                PST
+              </code>
+              ;
+              <code>
+                GMT-08:00
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                Z
+              </code>
+            </td>
+            <td>
+              Zona horaria
+            </td>
+            <td>
+              RFC 822 zona horaria
+            </td>
+            <td>
+              <code>
+                -0800
+              </code>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Cuando se llama a la función de exportación, la hora actual es proporcionada en el parámetro {0}. 
+		  A continuación se muestran algunos ejemplos de formateo de marcado de tiempo 2010-02-15 17:12:45:
+        </p>
+        <p>
+          VNA_{0,date,yyMMdd} --> VNA_100215.xls
+        </p>
+        <p>
+          VNA_{0,time,HHmmss} --> VNA_171245.xls
+        </p>
+        <p>
+          VNA_{0,date,yyMMdd}_{0,time,HHmmss} --> VNA_100215_171245.xls
+        </p>
+
+      </div>
+    </body>
+  </html>

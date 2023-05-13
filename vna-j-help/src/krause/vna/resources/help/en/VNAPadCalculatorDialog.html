@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#EFEFEF">
+  <h1>Calculator for resistive attenuators</h1>
+    <h2>
+      Usage
+    </h2>
+    <ol>
+      <li>
+      <p>
+        Enter the requested attenuation in the input field
+        <em>
+          Attenuation
+        </em>
+      </p>
+    </li>
+    <li>
+    <p>
+      Enter the requested input resistance in the field
+      <em>
+        R1
+      </em>
+    </p>
+  </li>
+  <li>
+  <p>
+    Enter the requested output resistance in the field
+    <em>
+      R2
+    </em>
+  </p>
+</li>
+<li>
+<p>
+  Enter the maximum number of resistor which are used to build the exact calculated resistors.
+</p>
+</li>
+<li>
+<p>
+  To switch between T-type and Pi-type pads, use the radio-buttons
+</p>
+</li>
+</ol>
+<h2>
+  Results
+</h2>
+<p>
+  The exact calculated resistor values for R3m R4 and R5 are display right to the entry fields of R1 and R2.
+</p>
+<p>
+  In the line
+  <em>
+    E12-Series
+  </em>
+  the possible resistor values for R3, R4 and R5 are displayed for the resistor series E12.
+</p>
+<p>
+  In the line
+  <em>
+    E24-Series
+  </em>
+  the possible resistor values for R3, R4 and R5 are displayed for the resistor series E24.
+</p>
+<p>
+  In the line
+  <em>
+    E48-Series
+  </em>
+  the possible resistor values for R3, R4 and R5 are displayed for the resistor series E48.
+</p>
+<p>
+  For each resistor series also the effective input resistance R1 and output resistance R2 are calculated and displayed
+</p>
+<h3>Resistor calculation</h3>
+<p>
+  In the tooltip text of each resistor R3, R4, R5 the combination of 1 to n resistors from this series is displayed.
+</p>
+<p>Lets take this as an example: <em>Pi-pad, Attenuation=18dB, R1=400Ohm, R2=50Ohm, max. #resistors=2</em></p>
+<ul>
+<li>The exact value for R4=552,77Ohm.</li>
+<li>Using the E12-series a 470Ohm resistor in series with an 82Ohm resistor is used</li>
+<li>Using the E24-series a 510Ohm resistor in series with an 43Ohm resistor is used</li>
+<li>Using the E48-series a 536Ohm resistor in series with an 16.2Ohm resistor is used</li></ul>
+<h2>
+  Limits
+</h2>
+<p>
+  It is not possible to calculate any combination of attenuation, input- and output-impedance.
+</p>
+<p>
+  If calculation fails, negative resistor values are displayed.
+</p>
+<p>
+  <img src="../images/PadCalcErr.jpg" alt="hm" />
+</p>
+<h2>
+  Samples
+</h2>
+<h3>
+  Pi-type pad
+</h3>
+<p>
+  <img src="../images/PadCalcPI.jpg" alt="hm" />
+</p>
+<h3>
+  T-type pad
+</h3>
+<p>
+  <img src="../images/PadCalcT.jpg" alt="hm" />
+</p>
+<h2>
+  Acknowledgements
+</h2>
+<p>
+  This calculation is based on the excellent articel from Ulrich Fleischmann, DL9LX in the German magazine CQ DL 2-2011
+  pp. 115.
+</p>
+</body>
+</html>

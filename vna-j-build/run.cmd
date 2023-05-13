@@ -1,0 +1,1 @@
+java -cp "./;cron4j-2.2.4.jar;jdom-1.1.2.jar;jcommon-1.0.17.jar;jfreechart-1.0.13.jar;iText-2.1.5.jar;commons-lang3-3.1.jar;commons-math-2.2.jar;jgoodies-common-1.8.0.jar;jgoodies-looks-2.6.0.jar;poi-3.7-20101029.jar;forms-1.2.1.jar;miglayout-4.0-swing.jar;AppleJavaExtensions.jar;jna-4.0.0.jar;purejavacomm-0.0.17.jar"	krause.vna.gui.VNAMain	

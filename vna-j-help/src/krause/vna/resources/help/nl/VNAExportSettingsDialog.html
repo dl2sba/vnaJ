@@ -1,0 +1,579 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      Algemeen
+    </h2>
+    <p>
+      Hier kunnen de algemene parameters voor de te exporteren data worden ingesteld.
+    </p>
+    <h2>
+      Uitvoerbestand
+    </h2>
+    <h3>
+      Invoerveld betandsnaam
+    </h3>
+    <p>
+      Hier kunt u een template voor de te exporteren bestandsnaam invoeren. De variabelen kunnen hier met
+      gebruik van "curly-braces" ingevoerd worden; vb.{0} voert de variable 0 in de string gedurende export. Alle later beschreven vervangvariabelen
+      worden ondersteund.
+    </p>
+    <h3>
+      Checkbox Overschrijven
+    </h3>
+    <p>
+      Als de exportbestanden al bestaan en de checkbox is aangevinkt, zal het bestaande bestand automatisch overschreven worden.
+	  Als de checkbox niet is aangevinkt zal een waarschuwingsbericht vertoond worden.
+    </p>
+    <h3>
+      Knop Zoeken
+    </h3>
+    <p>
+      Door te klikken op de zoekknop wordt het directory-selectiedialoog geopend, hier kan de gebruiker een directory selecteren voor de
+      te exporteren bestanden.
+    </p>
+    <h2>
+      Kopregel
+    </h2>
+    <p>
+      Deze kopregel wordt geprint boven het diagramgebied bij JPG- en PDF-export. Dezelfde vervangingparameters als voor de
+      bestandsnaamvelden worden ondersteund.
+    </p>
+    <h2>
+      Commentaar
+    </h2>
+    <p>
+      Dit commentaar wordt geprint onder het diagramgebied van het te exporteren PDF-document. Dezelfde vervangingsparameters als voor 
+      de bestandsnaamvelden worden ondersteund. Het commentaar wordt geprint met een fixed-sized font, simpele formatting kan worden
+      gebruikt.
+    </p>
+    <h2>
+      Decimale separator
+    </h2>
+    <p>
+      Normaal wordt de decimale separator geselecteerd door de operating-systeeminstellingen. Voor export in het S-parameter
+      format kan de te gebruiken decimale separator hier geselecteerd worden.
+    </p>
+    <h2>
+      Ondersteunde variabelen
+    </h2>
+    <p>
+      Deze variabelen worden ondersteund:
+    </p>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr>
+          <td>
+            {0}
+          </td>
+          <td>
+            De huidige datum/tijd wordt hier ingevoerd. Formatting wordt verder besproken in volgend hoofdstuk. 
+		  </td>
+        </tr>
+        <tr>
+          <td>
+            {1}
+          </td>
+          <td>
+            De huidig geselecteerde scanmode van de analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {2}
+          </td>
+          <td>
+            De korte naam van de geselecteerde analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {3}
+          </td>
+          <td>
+            De lange naam van de geselecteerde analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {4}
+          </td>
+          <td>
+            Startfrequentie van de scan. Duizend separatoren worden vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {5}
+          </td>
+          <td>
+            Stopfrequentie van de scan. Er worden geen separatoren vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {6}
+          </td>
+          <td>
+            Startfrequentie van de scan. Duizend separatoren worden getoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {7}
+          </td>
+          <td>
+            Stopfrequentie van de scan. Er worden geen separatoren vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {8}
+          </td>
+          <td>
+            Aantal gebruikte samples voor deze scan.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {9}
+          </td>
+          <td>
+            Het aantal gebruikte scans voor het genereren van de data (nog niet ondersteund).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {10}
+          </td>
+          <td>
+            Het aantal samples in de calibratiedataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {11}
+          </td>
+          <td>
+            Het aantal gebruikte scans om de calibratiedataset te genereren.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {12}
+          </td>
+          <td>
+            Naam als de calibratiedataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {13}
+          </td>
+          <td>
+            De naam van de huidig ingelogde gebruiker.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>
+      Datum formatting
+    </h2>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr bgcolor="#ccccff">
+          <th align=left>
+            Letter
+          </th>
+          <th align=left>
+            Datum of tijd component
+          </th>
+          <th align=left>
+            Presentatie
+          </th>
+          <th align=left>
+            Voorbeeld
+          </th>
+          <tr>
+            <td>
+              <code>
+                G
+              </code>
+            </td>
+            <td>
+              Era designator
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                AD
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                y
+              </code>
+            </td>
+            <td>
+              Jaar
+            </td>
+            <td>
+              Jaar
+            </td>
+            <td>
+              <code>
+                1996
+              </code>
+              ;
+              <code>
+                96
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                M
+              </code>
+            </td>
+            <td>
+              Maand van het jaar
+            </td>
+            <td>
+              Maand
+            </td>
+            <td>
+              <code>
+                Juli
+              </code>
+              ;
+              <code>
+                Jul
+              </code>
+              ;
+              <code>
+                07
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                w
+              </code>
+            </td>
+            <td>
+              Week van het jaar
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                27
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                W
+              </code>
+            </td>
+            <td>
+              Week van de maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                D
+              </code>
+            </td>
+            <td>
+              Dag van het jaar
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                189
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                d
+              </code>
+            </td>
+            <td>
+              Dag van de maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                10
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                F
+              </code>
+            </td>
+            <td>
+              Dag van de week in de maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                E
+              </code>
+            </td>
+            <td>
+              Dag van de week
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                Dinsdag
+              </code>
+              ;
+              <code>
+                Din
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                a
+              </code>
+            </td>
+            <td>
+              Am/pm marker /
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                PM
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              H
+            </td>
+            <td>
+              Uur van de dag (0-23)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                k
+              </code>
+            </td>
+            <td>
+              Uur van de dag (1-24)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                24
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                K
+              </code>
+            </td>
+            <td>
+              Uur in am/pm (0-11)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                0
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                h
+              </code>
+            </td>
+            <td>
+              Uur in am/pm (1-12)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                12
+              </code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>
+                m
+              </code>
+            </td>
+            <td>
+              Minuut van het uur
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                30
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                s
+              </code>
+            </td>
+            <td>
+              Seconde van minuut
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                55
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                S
+              </code>
+            </td>
+            <td>
+              Milliseconde
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                978
+              </code>
+            </td>
+          </tr>
+
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                z
+              </code>
+            </td>
+            <td>
+              Tijdzone
+            </td>
+            <td>
+              Algemene tijdzone
+            </td>
+            <td>
+              <code>
+                Pacific Standaard Tijd
+              </code>
+              ;
+              <code>
+                PST
+              </code>
+              ;
+              <code>
+                GMT-08:00
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                Z
+              </code>
+            </td>
+            <td>
+              Tijdzone
+            </td>
+            <td>
+              RFC 822 tijdzone
+            </td>
+            <td>
+              <code>
+                -0800
+              </code>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Wanneer de exportfunctie wordt aangeroepen zal de huidige tijdstempel worden voorzien in parameter {0}. Hier zijn sommige formatting
+          voorbeelden voor deze tijdstempel 2010-02-15 17:12:45:
+        </p>
+        <p>
+          VNA_{0,date,yyMMdd} --> VNA_100215.xls
+        </p>
+        <p>
+          VNA_{0,time,HHmmss} --> VNA_171245.xls
+        </p>
+        <p>
+          VNA_{0,date,yyMMdd}_{0,time,HHmmss} --> VNA_100215_171245.xls
+        </p>
+
+      </div>
+    </body>
+  </html>

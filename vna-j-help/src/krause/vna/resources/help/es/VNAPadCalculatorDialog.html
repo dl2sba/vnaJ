@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>
+    </title>
+  </head>
+  <body bgcolor="#EFEFEF">
+  <h1>Calculadora de atenuadores resistivos</h1>
+    <h2>
+      Uso
+    </h2>
+    <ol>
+      <li>
+      <p>
+        Introduzca la atenuación requerida en el campo de entrada
+        <em>
+          Atenuación
+        </em>
+      </p>
+    </li>
+    <li>
+    <p>
+      Introduzca la resistencia de entrada requerida en el campo
+      <em>
+        R1
+      </em>
+    </p>
+  </li>
+  <li>
+  <p>
+    Introduzca la resistencia de salida requerida en el campo
+    <em>
+      R2
+    </em>
+  </p>
+</li>
+<li>
+<p>
+  Introduzca el máximo numero de resistencias que van a ser usadas para contruir la resistancia a calcular.
+</p>
+</li>
+<li>
+<p>
+  Para cammbiar entre una red tipo-T y tipo-Pi, use los botones de radio
+</p>
+</li>
+</ol>
+<h2>
+  Resultados
+</h2>
+<p>
+  Los valores de la resistencia exacta calculada para R3 R4 y R5 son mostrados a la derecha de los campos de entrada R1 and R2.
+</p>
+<p>
+  En la línea
+  <em>
+    Serie E12
+  </em>
+  el posible valor de la resistencia para R3, R4 y R5 son mostrados para la resistencia serie E12.
+</p>
+<p>
+  En la línea
+  <em>
+    Serie E24
+  </em>
+  el posible valor de la resistencia para R3, R4 y R5 son mostrados para la resistencia serie E24.
+</p>
+<p>
+  En la línea
+  <em>
+    Serie E48
+  </em>
+  el posible valor de la resistencia para R3, R4 y R5 son mostrados para la resistencia serie E48.
+</p>
+<p>
+  Para cada serie de resistencias también la resistencia de entrada efectiva R1 y la resistencia 
+  de salida R2 se calculan y muestran
+</p>
+<h3>Cálculo de resistencias</h3>
+<p>
+  En el cartel de texto de cada resistencia R3, R4, R5 se muestra la combinación de 1 a n resistencias de esta serie.
+</p>
+<p>Veamos un ejemplo: <em>Red-Pi, Atenuación=18 dB, R1=400 Ohm, R2=50 Ohm, max. #resistencias=2</em></p>
+<ul>
+<li>El valor exacto para R4=552,77 Ohm.</li>
+<li>Usando la serie E12 se usa una resistencia de 470 Ohm en serie con una de 82 Ohm</li>
+<li>Usando la serie E24 se usa una resistencia de 510 Ohm en serie con una de 43 Ohm</li>
+<li>Usando la serie E48 se usa una resistencia de 536 Ohm en serie con una de 16.2 Ohm</li></ul>
+<h2>
+  Limitaciones
+</h2>
+<p>
+  No es posible calcular cualquier combinación de atenuación, entrada e impedancia de salida.
+</p>
+<p>
+  Si el cálculo falla, se muestran valores de resistencias negativos.
+</p>
+<p>
+  <img src="../images/PadCalcErr.jpg" alt="hm" />
+</p>
+<h2>
+  Ejemplos
+</h2>
+<h3>
+  Red tipo-Pi
+</h3>
+<p>
+  <img src="../images/PadCalcPI.jpg" alt="hm" />
+</p>
+<h3>
+  Red tipo-T
+</h3>
+<p>
+  <img src="../images/PadCalcT.jpg" alt="hm" />
+</p>
+<h2>
+  Agradecimientos
+</h2>
+<p>
+  Este cálculo está basadp en el excelente artículo de Ulrich Fleischmann, DL9LX de la revista alemana CQ DL 2-2011
+  pág. 115.
+</p>
+</body>
+</html>

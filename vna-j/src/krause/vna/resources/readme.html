@@ -1,0 +1,1664 @@
+<!DOCTYPE 
+    html
+    PUBLIC
+    "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body style="font-family: Arial">
+	<h1>General</h1>
+
+	<div style="margin-left: 30px;">
+		<h3>The latest version of vna/J can be always found here:</h3>
+		&nbsp;
+
+		<center>
+			<a href="http://vnaj.dl2sba.com">http://vnaj.dl2sba.com</a>
+		</center>
+		<h3>Please report any bugs to</h3>
+		<center>
+			<a href="mailto:vnaj@dl2sba.com">vnaj@dl2sba.com</a>
+		</center>
+
+		<p>&nbsp;</p>
+	</div>
+
+	<h1>Version history</h1>
+
+	<div style="margin-left: 30px;">
+		<table border="1" summary="Changes within the various versions ...">
+			<tbody>
+				<tr>
+					<th>Version</th>
+					<th>Date</th>
+					<th>What</th>
+				</tr>
+				<tr>
+					<td>3.4.8</td>
+					<td>7. August 2021</td>
+					<td><ul>
+						<li>Some minor fixed for OS X plattform</li>
+					</ul>
+				</tr>
+				<tr>
+					<td>3.4.7</td>
+					<td>1. April 2021</td>
+					<td><ul>
+						<li>Set default color scheme to light one</li>
+					</ul>
+				</tr>
+				<tr>
+					<td>3.4.5</td>
+					<td>27. August 2020</td>
+					<td><ul>
+						<li>Experimental support for various dark themes in color config dialog</li>
+					</ul>
+				</tr>
+				<tr>
+					<td>3.4.4</td>
+					<td>11 July 2020</td>
+					<td><ul>
+						<li>Port extension length can now be negative</li>
+						<li>Some minor changes</li>
+					</ul>
+				</tr>
+				<tr>
+					<td>3.4.3</td>
+					<td>10 July 2020</td>
+					<td><ul>
+						<li>Bug on OSX in Smith chart config dialog fixed</li>
+						<li>removed update function</li>
+					</ul>
+				</tr>
+				<tr>
+					<td>3.4.2</td>
+					<td>26. June 2020</td>
+					<td><ul>
+							<li>Enhanced precision miniVNA with driver 'miniVNA V2' - now also SHORT cal is also used in reflection mode - Tnx Don, WB9NMN</li>
+							<li>Enhanced precision for VNArduino - now also SHORT cal is also used in reflection mode - Tnx Don, WB9NMN</li>
+							<li>Automatic buffer fill when increasing average scan mode</li>
+							<li>Corrected averaging in speedup mode. Tnx Kris for info</li>
+							<li>Bug in loading calibration data for the VNArduino fixed.</li>
+							<li>Erik, SM3HEW has against enhanced his excellent
+								translation into Swedish - a big big thanks!!!</li>
+							<li>Added group-delay calculation to reflection mode</li>
+							<li>Fixed calculation of group delay - Thanks Gary, G3TMG</li>
+						</ul></td>
+				</tr>
+				<tr>
+					<td>3.3.4</td>
+					<td>25. November 2019</td>
+					<td><ul>
+							<li>Configuration for Smith-Chart extended</li>
+							<li>Calibration technique extended for miniVNA based
+								analyzers. Phase now also used for calibration.</li>
+							<li>Timeout for VNArduino extended</li>
+							<li>reverted marker math changes back to 3.3.2</li>
+						</ul></td>
+				</tr>
+				<tr>
+					<td>3.3.3</td>
+					<td>18. October 2019</td>
+					<td><ul>
+							<li>Fixed marker math for Cs and Ls- thanks to Simon K. for
+								the support</li>
+							<li>Timeout handling enhanced for pro/pro2/tiny</li>
+							<li>Option to disable window resize</li>
+							<li>Icons added to set start/stop frequency to the maximum
+								values</li>
+							<li>minor fixes</li>
+						</ul></td>
+				</tr>
+				<tr>
+					<td>3.3.2</td>
+					<td>30. Juni 2019</td>
+					<td>
+						<ul>
+							<li>Erik, SM3HEW has enhanced his excellent translation into
+								Swedish - a big big thanks!!!</li>
+							<li>Port extension can now be enabled/disabled without
+								loosing the parameters</li>
+							<li>Fixed some minor bugs also ...</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.3.1</td>
+					<td>30. May 2019</td>
+					<td>
+						<ul>
+							<li>Toshiyuki, JP1PZE has enhanced his excellent translation
+								into Japanese - a big big thanks!!!</li>
+							<li>Fixed issue with markers outside of visible diagram area
+								after window resize</li>
+							<li>Fixed some minor bugs also ...</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.3.0</td>
+					<td>23. March 2019</td>
+					<td>
+						<ul>
+							<li>Major Code cleanup and bug-fixes</li>
+							<li>Please recreate the calibration files, as they are not
+								compatible with previous releases</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.11</td>
+					<td>25. November 2018</td>
+					<td>
+						<ul>
+							<li>Moved to Apache Commons Math 3.6.1</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.10</td>
+					<td>24. November 2018</td>
+					<td>
+						<ul>
+							<li>Compiled for JAVA 1.8 with JDK 10.0.2</li>
+							<li>Added optional simple phosphor screen behaviour. <br />
+								Phosphor simulation is done for both scales. The last 8 scans
+								are drawn with decreasing brightness.<br /> In Auto-scale mode,
+								the diagram is scaled to the current scan, so some old data may
+								be invisible.
+							</li>
+							<li>Average settings are restored after application restart.</li>
+							<li>Speed settings are restored after application restart.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.9</td>
+					<td>13. September 2018</td>
+					<td>
+						<ul>
+							<li>Compiled with JDK 10.0.2</li>
+							<li>Should now work on Mac OS X with latest JAVA releases</li>
+							<li>vna/J now works only with JAVA8 and newer releases!</li>
+							<li>Scan data smoothed when using &quot;speedup&quot;
+								function</li>
+							<li>Number of speedup steps extended to 6</li>
+							<ul>
+								<li>miniVNAtiny 1000 samples&nbsp;with speedup&nbsp;1x
+									4.6s, with speedup 6x 1.0s</li>
+								<li>miniVNApro 1000 samples with speedup 1x 6.6s, with
+									speedup 6x 1.3s</li>
+							</ul>
+							<li>Fixed NLS support</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.8</td>
+					<td>06. August 2018</td>
+					<td>
+						<ul>
+							<li>Fixed missing message when no caldata is available
+								during cal export</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.8</td>
+					<td>06. August 2018</td>
+					<td>
+						<ul>
+							<li>miniVNA, and miniVNApro fixed 99% display at scan end</li>
+						</ul>
+
+						<ul>
+							<li>Fixed XLS export failure for transmission scan</li>
+						</ul>
+
+						<ul>
+							<li>Fixed driver issue for miniVNApro wiith extender</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.7</td>
+					<td>6. June 2018</td>
+					<td>
+						<ul>
+							<li>VNArduino::Inserted a short delay after init - causes
+								problems on some clones</li>
+						</ul>
+
+						<ul>
+							<li>VNARduino::Changed default to a range of 100kHz to 65MHz
+								and ticks to 23861284</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.2.6</td>
+					<td>May 2018</td>
+					<td>
+						<ul>
+							<li>All data is now stored in $home/vnaJ.3.2 directory. You
+								can copy the calibration files from the old vnaJ.3.1 directory
+								as format hasn&#39;t changed</li>
+							<li>Support for new miniVNApro2 added</li>
+							<li>Device detection optimized for miniVNA, miniVNApro2,
+								miniVNApro and miniVNAtiny. To speed up driver checking, the
+								delay for a wireless connection is now optional in driver
+								selection dialog.</li>
+							<li>Cleaned up the device configuration code</li>
+							<li>Added user configurable Gaussian filter. To calculate
+								factors check
+								http://dev.theomader.com/gaussian-kernel-calculator. The file
+								Gaussian.txt can be found in the configuration directory and
+								must contain an odd number of lines with filter coefficients
+								else a default file is created as a starting point. Also a tool
+								added to create Gaussian filter file inside application.</li>
+							<li>Frequency calibration now also stored on application
+								exit</li>
+							<li>Cable data for Hyperflex5, Hyperflex10 and Highflexx10
+								added</li>
+							<li>File selection for firmware files updated</li>
+							<li>Delay after commands send to VNA set to 0ms for
+								miniVNAtiny. Reduced for all other VNAs to 50ms.</li>
+							<li>Should now work with JAVA 9 and JAVA 10</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.22</td>
+					<td>23. March 2018</td>
+					<td>
+						<ul>
+							<li>Separation of averaging logic from speedup logic</li>
+							<li>Averaging logic is now a true moving average over
+								n-samples</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.21</td>
+					<td>9. March 2018</td>
+					<td>
+						<ul>
+							<li>Added new parameters to the headless application</li>
+							<li>For miniVNA, miniVNApro and miniVNAtiny added more
+								calculated data for transmission scan. Credits to YO3FFF Christi
+								and G3TXQ for his document
+								http://www.karinya.net/g3txq/chokes/s21.pdf</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.20</td>
+					<td>23. February 2018</td>
+					<td>
+						<ul>
+							<li>Analyze moved from Tools menu to File menu to have it
+								always available</li>
+							<li>Some VNAs have longer startup time and will produce
+								peaks at the begin of the scan. To reduce this issue, the
+								generator can be kept on after scan. Thanks to Cristian/YO3BN
+								for the hint.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.19</td>
+					<td>29. July 2017</td>
+					<td>
+						<ul>
+							<li>Firmware update is now possible, even no calibration is
+								available.</li>
+							<li>Size of language selection window corrected. Window is
+								now also resizable.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.18</td>
+					<td>3. July 2017</td>
+					<td>
+						<ul>
+							<li>Z is also recalculated with port extension</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.17</td>
+					<td>4. June 2017</td>
+					<td>
+						<ul>
+							<li>Russian translation now also available. Thanks to Yuriy
+								Osadchiy for is work on the translation!</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.16</td>
+					<td>12. March 2017</td>
+					<td>
+						<ul>
+							<li>Mode in marker math dialog is correctly selected for
+								scan mode</li>
+							<li>Marker math dialog optimized</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.15</td>
+					<td>6. March 2017</td>
+					<td>
+						<ul>
+							<li>Generator is turned off after scan</li>
+							<li>MetroVNA - Lowest frequency reduced to 100kHz -
+								Calibration must be redone</li>
+							<li>This and future version works only for the miniVNApro
+								with firmware &gt;= 2.6</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.14</td>
+					<td>5. January 2017</td>
+					<td>
+						<ul>
+							<li>Added driver for F4GOH VNArduino</li>
+							<li>Updated driver for miniVNApro+extender</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.13 XMAS Edition</td>
+					<td>24. December 2016</td>
+					<td>
+						<ul>
+							<li>Fixed problem with some scan ranges and windows sizes.
+								Thanks to Angel.</li>
+							<li>Bug fixed in driver for minIVNApro with extender -
+								thanks to Ian ZL2IH and Karl-Heinz DL9GAB.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.12</td>
+					<td>20. November 2016</td>
+					<td>
+						<ul>
+							<li>Option added to driver selection dialog to display all
+								available serial ports on system</li>
+							<li>List of cable types in cable length dialog is loaded
+								from cables.csv in vna/J config directory</li>
+							<li>Frequency ranges for bandmap in main diagram is loaded
+								from bandmap.csv in vna/J config directory</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.11</td>
+					<td>5. November 2016</td>
+					<td>
+						<ul>
+							<li>Driver fixed for miniVNA/metroVNA</li>
+							<li>Bug in vna/J update feature fixed</li>
+							<li>Error message fixed on invalid export directory</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.10</td>
+					<td>27. October 2016</td>
+					<td>
+						<ul>
+							<li>Driver fixed for miniVNApro + Extender</li>
+							<li>Filter code for miniVNAtiny removed</li>
+							<li>Creation of calibration block changed.</li>
+							<li>Number of calibration steps limited between 3.000 and
+								30.000</li>
+							<li>Thanks to some of my Chinese friends for decompiling the
+								code. Keep away of obscure download sources.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.9pre</td>
+					<td>14. March 2016</td>
+					<td>
+						<ul>
+							<li>Upgraded to purejavacomm-1.0.0.jar</li>
+							<li>Bugs fixed regarding timeout issues on some machines</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.8</td>
+					<td>20. November 2015</td>
+					<td>
+						<ul>
+							<li><b>Please delete the file vna.settings.xml in the
+									configuration directory prior to use this version and
+									re-execute the phase calibration for the miniVNA Tiny.</b></li>
+							<li>Driver for metroVNA extended</li>
+							<li>Fixed display bug for metroVNA in calibration load/save
+								dialogs</li>
+							<li>Upgraded to jna-4.2.1.jar</li>
+							<li>Upgraded to purejavacomm-0.0.28.jar</li>
+							<li>miniVNA driver optimized for new serial library</li>
+							<li>miniVNA pro driver optimized for new serial library</li>
+							<li>miniVNA Tiny driver renamed to match physical device</li>
+							<li>miniVNA Tiny driver various bug fixes</li>
+							<li>miniVNA Tiny driver optimized for new serial library.</li>
+							<li>Cable length measurement should now work for miniVNA
+								again</li>
+							<li>Cable loss dialog extended</li>
+							<li>Number of over samples is now stored inside calibration
+								block</li>
+							<li>Bugs fixed for metroVNA driver</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.7</td>
+					<td>30. May 2015</td>
+					<td>
+						<hr />
+						<ul>
+							<li>Bug fixed in preset loading</li>
+							<li>Group delay scale bugs fixed</li>
+							<li>Graphic export now also works for group delay data</li>
+							<li>Port extension now also works with negative lengths</li>
+							<li>WISH::GD in S11 mode</li>
+							<li>WISH::Settings are automatically reloaded on application
+								restart</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.6</td>
+					<td>18. April 2015</td>
+					<td>
+						<ul>
+							<li>Erik, SM3HEW has again updated the Swedish translation</li>
+							<li>Tony, F4GTG has finished the French translation</li>
+							<li>Toshiyuki, JP1PZE has translated vna/J into Japanese</li>
+							<li>Fixed marker data in diagram export</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.5</td>
+					<td>23. March 2015</td>
+					<td>
+						<ul>
+							<li>Erik, SM3HEW has updated the Swedish translation -
+								thanks again for his dedication to the community</li>
+							<li>Tony, F4GTG has done the first translation to French -
+								thanks for your work!</li>
+							<li>Bug fixed in calibration for miniVNA and miniVNA<sup>pro</sup></li>
+							<li>Bug in frequency calibration for miniVNA<sup>tiny</sup>
+								corrected
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.4</td>
+					<td>2. March 2015</td>
+					<td>
+						<ul>
+							<li>In calibration mode 1 now also overscan is supported</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.3</td>
+					<td>13. February 2015</td>
+					<td>
+						<ul>
+							<li>SWR Scale can now also be customized like other scales</li>
+							<li>SWR scale now always shows scale in JPG/PDF export</li>
+							<li>Fixed scaling issues on scales</li>
+							<li>Fixed issue with calibration block resizing</li>
+							<li>Added missing languages to selection dialog. If someone
+								is interested in translating additional languages - please
+								contact me</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.2</td>
+					<td>20. January 2015</td>
+					<td>
+						<ul>
+							<li>Fixed issue with mode 1 calibration data</li>
+							<li>Added port extension also multi-tune function</li>
+							<li>Calibration data bug fixed in multi-tune window</li>
+							<li>Port extension length ({15}) and port extension vf
+								({16}) available for diagram export</li>
+							<li>Fixed problem, that reference trace was hidden by band
+								map</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.1</td>
+					<td>18. January 2015</td>
+					<td>
+						<ul>
+							<li>Port extension only enabled in reflection mode</li>
+							<li>Smith chart only enabled in reflection mode</li>
+							<li>New tool for cable loss measurement added in Tools menu</li>
+							<li>Version 3.1.x uses now an own home directory
+								$home/vnaJ.3.1</li>
+							<li>Version 3.1.x now uses a version.3.1.xml to check for
+								updates</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.1.0</td>
+					<td>2. January 2015</td>
+					<td>
+						<ul>
+							<li>Port extension added for reflection measurement. Use the
+								new &quot;Port Ext.&quot; button in the scale select panel. BUT
+								- be careful - currently calculation is done only with lossless
+								cables! More to come later.</li>
+							<li>Japanese coaxial cable types added</li>
+							<li>Toshi, JP1PZE, has updated the Japanese translation of
+								the user guide - please check the manuals download page</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.8</td>
+					<td>24. November 2014</td>
+					<td>
+						<ul>
+							<li>Export calibration data - name used from loaded
+								calibration data</li>
+							<li>Data analysis dialog - extension to image file added, if
+								not given in file chooser dialog</li>
+							<li>Data analysis dialog - diagram legend added to show
+								scale association</li>
+							<li>New scale for phase angle added</li>
+							<li>New scale for group delay added</li>
+							<li>Loss and phase fields in marker now only displayed once
+								depending on mode</li>
+							<li>Now SWR 3:1 and 2:1 circles in Smith-chart</li>
+							<li>Czech translation added - Many thanks to Martin OK1RR!!!</li>
+							<li>Corrected value display for all scales - this was a bug
+								since V1.0 - strange, that nobody has discovered this ...</li>
+							<li>Bug fixed in reference loading for main diagram</li>
+							<li>Bug fixed in SnP Importer regarding the handling of
+								whitespaces</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.7</td>
+					<td>3. August 2014</td>
+					<td>
+						<ul>
+							<li>S-Parameter collector - bug fixed in export of S12 and
+								S21 parameter - thanks to Gary Noe</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.6</td>
+					<td>2. August 2014</td>
+					<td>
+						<ul>
+							<li>Markers can be displayed as triangle or as vertical line
+								- see configuration dialog</li>
+							<li>IARU-Region 1 band plan can be displayed - see
+								configuration dialog</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.5</td>
+					<td>1. August 2014</td>
+					<td>
+						<ul>
+							<li>Downgraded to serial library 0.0.17 due to problems with
+								latest library on some systems</li>
+							<li>Corrected mixed class version - now should be fully
+								compatible with JAVA 1.6 - Thanks to Norbert, DK6RX</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.4</td>
+					<td>20. July 2014</td>
+					<td>
+						<ul>
+							<li>Upgrade to latest serial library 0.0.21 - Thanks to
+								Peter, G0DZB
+								(https://github.com/nyholku/purejavacomm/commit/b39d9d651b791fc51b2a3630307c13d672d9fa8a)</li>
+							<li>Corrected dynamic range on miniVNA tiny</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.3</td>
+					<td>9. July 2014</td>
+					<td>
+						<ul>
+							<li>miniVNA Tiny - Usability of the driver info dialog
+								enhanced</li>
+							<li>miniVNA Tiny - Frequency-calibration corrected - thanks
+								to Michael, DL7UKM</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.2</td>
+					<td>4. July 2014</td>
+					<td>
+						<ul>
+							<li>Added filtering to the miniVNA tiny driver for better
+								results.<br /> Default mode is 1.<br /> Do not mix calibration
+								files with different filter modes.<br /> <br /> *** Please
+								recreate the calibration files for the tinyVNA ***
+							</li>
+							<li>Import and export of calibration files added</li>
+							<li>SWR 3:1 circle added to Smith-chart</li>
+							<li>FFT and BEACON functions moved to the Tools menu</li>
+							<li>Exit button removed from the toolbar</li>
+							<li>Moved to JGoodies-looks 2.6.0</li>
+							<li>Moved to JGoodies-commons 1.8.0</li>
+							<li>On Mac OS X systems, only communication ports starting
+								with <b>cu</b> are displayed
+							</li>
+							<li>On Mac OS X systems the firmware loader for the tinyVNA
+								is not available</li>
+							<li>Corrected frequency display in generator dialog for
+								miniVNA and tinyVNA</li>
+							<li>Independence version ;-) (see
+								http://en.wikipedia.org/wiki/United_States_Declaration_of_Independence)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.1</td>
+					<td>29. June 2014</td>
+					<td>
+						<ul>
+							<li>Minor fixes for FW 1.0</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>3.0.0</td>
+					<td>27. June 2014</td>
+					<td>
+						<ul>
+							<li>Support for miniVNA tiny added</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.9.3</td>
+					<td>18. May 2014</td>
+					<td>
+						<ul>
+							<li>German typos corrected</li>
+							<li>Update URL fixed</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.9.2</td>
+					<td>05. May 2014</td>
+					<td>
+						<ul>
+							<li>Message on successful export corrected</li>
+							<li>Export bug fixed in transmission CSV export - Thanks to
+								Bertrand, ON7KER for finding a bug, existing since version 2.0!</li>
+							<li>Headless::now works also in transmission mode</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.9.1</td>
+					<td>26. April 2014</td>
+					<td>
+						<ul>
+							<li>headless java application added</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.9.0x</td>
+					<td>14. April 2014</td>
+					<td>
+						<ul>
+							<li>*** please recreate calibration files ***</li>
+							<li>Support for metroVNA added (see
+								http://metrovna.webnode.it)</li>
+							<li>Bug fixed with in scheduler</li>
+							<li>Moved to jna-4.0.0.jar</li>
+							<li>Chars and dot-dash-ration fixed in beacon mode</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6f</td>
+					<td>26. December 2013</td>
+					<td>
+						<ul>
+							<li>Bug fixed with battery indicator</li>
+							<li>Added special chars &#39;#&#39;, &#39;+&#39;,
+								&#39;.&#39;, &#39;,&#39;, &#39;-&#39;, &#39;?&#39;, &#39;!&#39;,
+								&#39;=&#39;, &#39;:&#39; for CW beacon</li>
+							<li>Corrected frequency range for extender. Please re-create
+								the calibration files.</li>
+							<li>Corrected the labels in calibration dialog for the
+								miniVNApro with extender</li>
+							<li>Bug fixed in multi-tune window for miniVNApro with
+								extender</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6e</td>
+					<td>3. December 2013</td>
+					<td>
+						<ul>
+							<li>Some minor bug fixes for old analyzers</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6d</td>
+					<td>30. November 2013</td>
+					<td>
+						<ul>
+							<li>Some minor glitches corrected in Smith-chart</li>
+							<li>Font-size for headline in PDF-export can be changed</li>
+							<li>Marker position can now be saved to presets</li>
+							<li>Battery indicator in scale select panel</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6c</td>
+					<td>17. May 2013</td>
+					<td>
+						<ul>
+							<li>Calibration dialog reduced for netbook displays</li>
+							<li>Default ranges of scales can be changed by user</li>
+							<li>Export title is now available as replacement parameter
+								for the export filename</li>
+							<li>The font-size of the marker data printed inside the
+								export diagram can now be selected</li>
+							<li>New serial library used
+								https://github.com/nyholku/purejavacomm/commit/ac58f521fdc61d7cd302bade13baab7dcc66b0ce</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6b</td>
+					<td>12. April 2013</td>
+					<td>
+						<ul>
+							<li>Scan ranges changed for extender. Can now be changed by
+								user in external file in preferences directory. Check user
+								manual for details.</li>
+							<li>Some shortcuts for menu functions added.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.6a</td>
+					<td>17. March 2013</td>
+					<td>
+						<ul>
+							<li>The data analysis dialog can handle now S-parameter
+								files with blank as well as tab separators</li>
+							<li>Bug fixed in data analysis dialog regarding display of
+								smith charts</li>
+							<li>Bug fixed in calibration dialog regarding button
+								enabling</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5f</td>
+					<td>18. February 2013</td>
+					<td>
+						<ul>
+							<li>Some minor fixes</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5e</td>
+					<td>12. January 2013</td>
+					<td>
+						<ul>
+							<li>Now possible to print marker data also in diagrams</li>
+							<li>Bug fixed in calibration data dialog, Thanks Erik,
+								SM3HEW</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5d</td>
+					<td>01. January 2013</td>
+					<td>
+						<ul>
+							<li>Calibration procedure refined for some analyzer types.
+								Please consult the user guide for details.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5c</td>
+					<td>02. December 2012</td>
+					<td>
+						<ul>
+							<li>Removed limitation for older miniVNApro related to scan
+								width to be multiples of 100</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5b</td>
+					<td>04. November 2012</td>
+					<td>
+						<ul>
+							<li>Updated serial library to nyholku-purejavacomm-df25644</li>
+							<li>Updated Swedish translation - Erik, SM3HEW, thanks
+								again!!!</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5a</td>
+					<td>10. October 2012</td>
+					<td>
+						<ul>
+							<li>Legend extended in exported diagrams</li>
+							<li>Fixed experimental menu naming</li>
+							<li>Layout changes in marker math dialog</li>
+							<li>Icon for driver info dialog changed</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.5</td>
+					<td>29. September 2012</td>
+					<td>
+						<ul>
+							<li>Spanish translation added - Thanks to Domingo, EA1DAX</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.4d</td>
+					<td>25. August 2012</td>
+					<td>
+						<ul>
+							<li>Test driver extended</li>
+							<li>Letter o fixed in beacon mode</li>
+							<li>Diagram size on JPEG clipboard export using values from
+								setup dialog</li>
+							<li>SWR scale fixed in data analysis dialog</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.4a</td>
+					<td>16. June 2012</td>
+					<td>
+						<ul>
+							<li>Chart markers changed from lines to triangles in
+								exported diagrams</li>
+							<li>Chart marker size in exported diagrams can be configured</li>
+							<li>Diagram resolution in exported PDF enhanced</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.4</td>
+					<td>08. June 2012</td>
+					<td>
+						<ul>
+							<li>Experimental beacon mode added</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3f</td>
+					<td>20. May 2012</td>
+					<td>
+						<ul>
+							<li>Analysis dialog can be called, even no driver loaded.</li>
+							<li>Some minor fixes</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3e</td>
+					<td>01. May 2012</td>
+					<td>
+						<ul>
+							<li>Wrong title in calibration dialog fixed.</li>
+							<li>New Swedish translation added - thanks to Erik SM3HEW</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3d</td>
+					<td>22. April 2012</td>
+					<td>
+						<ul>
+							<li>Frequency calibration dialog was unusable for miniVNA -
+								fixed.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3c</td>
+					<td>18. March 2012</td>
+					<td>
+						<ul>
+							<li>Davide discovered a strange bug when changing the stop
+								frequency directly after start.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3b</td>
+					<td>17. March 2012</td>
+					<td>
+						<ul>
+							<li>Fixed incorrect range for extender device. Please delete
+								settings.xml in configuration directory and recreate the
+								calibration files.</li>
+							<li>Frequency range corrected for miniVNApro Extender</li>
+							<li>Bug fixed in multi-scan dialog</li>
+							<li>Bug fixed in delta-marker</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.3</td>
+					<td>06. March 2012</td>
+					<td>
+						<ul>
+							<li>Since miniVNApro firmware version 2.5 auto-reset is
+								supported for firmware-upgrade</li>
+							<li>Speedup slider disabled while scan running</li>
+							<li>Frequency preset table added decimal separators</li>
+							<li>Scale inversion for s-parameter data in data analysis
+								dialog fixed</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.8.2</td>
+					<td>26. February 2012</td>
+					<td>
+						<ul>
+							<li>!!! Documents will be updated step-by-step !!!</li>
+							<li>Final driver for extender implemented.</li>
+							<li>Firmware-update tool now integrated within vna/J.</li>
+							<li>Frequency calibration dialog now works with every
+								possible frequency of the analyser</li>
+							<li>Start and stop frequency fields now support keyword min
+								and max.</li>
+							<li>Due to the miniVNApro with the GHz extender all
+								frequency variables changed to LONG</li>
+							<li>Generator for miniVNApro has now one digit more for
+								frequency fields</li>
+							<li>miniVNApro - minimum calibration step now 200</li>
+							<li>S2P-Export bug corrected for MAX6-500 driver</li>
+							<li>Delta-marker now also printed on PDF-document</li>
+							<li>Start and Stop-frequency fields now support ENTER-key</li>
+							<li>Scan-button now supports ENTER-key</li>
+							<li>Use F2-key to set focus on start frequency field</li>
+							<li>Use F3-key to set focus on stop frequency field</li>
+							<li>Use F4-key to set focus on mode selection box</li>
+							<li>Changed frequency calibration reference from 100MHz to
+								10MHz.</li>
+							<li>RL scale shows now correct negative values</li>
+							<li>TL scale shows now correct negative values</li>
+							<li>Swedish translation updated for application (Thanks to
+								Erik, SM3HEW)</li>
+							<li>Swedish translation updated for miniVNApro driver
+								(Thanks to Erik, SM3HEW)</li>
+							<li>More coaxial cables added to cable length measurement
+								dialog (Thanks to Erik, SM3HEW)</li>
+							<li>Bug fixed in zoom function for frequencies above 2GHz</li>
+							<li>Bug fixed in cable length dialog when using miniVNApro
+								with extender</li>
+							<li>Auto-Zoom button moved to configuration dialog</li>
+							<li>Automatic scan after selection of frequency range from
+								table possible. Checkbox added to configuration dialog</li>
+							<li>Decimal places can now be entered in custom scale range
+								dialog</li>
+							<li>SWR added to XLS-Export</li>
+							<li>New calibration file format has a comment field</li>
+							<li>Fixed bug in auto scaling</li>
+							<li>Raw export format changed to XML</li>
+							<li>Raw export button moved from scale panel to toolbar</li>
+							<li>Added JGoodies look and feel</li>
+							<li>Strict separation between reurn loss/phase and
+								transmission loss/phase</li>
+							<li>Reference resistance is displayed on smith char</li>
+							<li>Reference resistance entered in driver info dialog is
+								now used for calculations</li>
+							<li>Multi-scan RL scale corrected</li>
+							<li>Textwidth of marker fields fixed on Windows</li>
+							<li>Optional speedup for measurement added</li>
+							<li>Fixed display of German characters in help dialog on Mac</li>
+							<li>Fixed degree symbol Smith-Chart</li>
+							<li>Magnitude of reflection coefficient now displayed on
+								Smith chart</li>
+							<li>Switched to commit 8534b5d730 for PureJAVAComm</li>
+							<li>miniVNAPRO - Attenuation correction values for I/Q
+								outputs available</li>
+							<li>Fixed XML import and export bugs</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.6</td>
+					<td>6. June 2011</td>
+					<td>
+						<ul>
+							<li>PureJavaComm commit nyholku-purejavacomm-2c7bb03</li>
+							<li>Bug fixed, that only every second scan works - sorry for
+								that</li>
+							<li>Message for not matching scan window size enhanced :-/</li>
+							<li>New driver version of miniVNApro with extender</li>
+							<li>Gerrit, PA3DJY has translated the manuals, help files
+								and driver info dialogs - Thanks again!</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.5</td>
+					<td>27. May 2011</td>
+					<td>
+						<ul>
+							<li>Please use always JAVA version 6 or newer!</li>
+							<li>Switched vom RXTX library to PureJavaComm due to issues
+								with Linux and Bluetooth. No need to install the RXTX stuff
+								anymore!</li>
+							<li>In cable measuement dialog, the selected cable type and
+								the user fields are stored and reloaded</li>
+							<li>Output signal switched off after scan for miniVNA</li>
+							<li>Bug fixed using F11/F12 to control scanning</li>
+							<li>Language can be changed inside application</li>
+							<li>miniVNA pro firmware release 2.3
+								<ul>
+									<li>Variable variable scan width</li>
+									<li>Fixed issue with compression on transmission
+										measurement</li>
+									<li>Please consult the driver guide for the miniVNApro</li>
+								</ul>
+							</li>
+							<li>Dutch translation added (Thanks to Gerrit, PA3DJY)</li>
+							<li>Hungarian translation updated (Thanks to Biro HG1DFB)</li>
+							<li>Button for single scan made more visible ;-)</li>
+							<li>Bug in online help dialog fixed</li>
+							<li>Pad calculator
+								<ul>
+									<li>hint added for usability</li>
+									<li>input parsing corrected</li>
+								</ul>
+							</li>
+							<li>XLS-Export extended</li>
+							<li>Fixed problem in cable length calculator when using feet
+								scale (Thanks to Whit)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.3</td>
+					<td>20. March 2011</td>
+					<td>
+						<ul>
+							<li>Battery indicator added in mRS miniVNApro info dialog</li>
+							<li>Swedish translation updated (Thanks to Erik, SM3HEW)</li>
+							<li>Update function extended. Readme file can now be
+								displayed prior to downloading.</li>
+							<li>Scaling error on Rs scale corrected.</li>
+							<li>Size of exported diagram images can be set in
+								export-settings dialog.</li>
+							<li>Smith-chart functionally extended</li>
+							<li>Data-analysis dialog now can also load S-parameter data
+								files (*.s1p, *.s2p)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.2</td>
+					<td>March 2011</td>
+					<td>
+						<ul>
+							<li>Calculator for resistive PI- and T-pads added</li>
+							<li>Reference resistance now correct written to S-parameter
+								file (Thanks to Erik, SM3HEW)</li>
+							<li>Bugs in reference resistance handling fixed (Thanks to
+								Erik, SM3HEW)</li>
+							<li>Smith-dialog can now be closed using the close box in
+								the dialog</li>
+							<li>Marker math-dialog can now be closed using the close box
+								in the dialog</li>
+							<li>Tune-dialog can now be closed using the close box in the
+								dialog</li>
+							<li>Driver guide for mRS miniVNApro updated.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.1</td>
+					<td>March 2011</td>
+					<td>
+						<ul>
+							<li>mRS - miniVNApro - Warning message on scan sizes not
+								ending 00</li>
+							<li>Minor bugs on marker search mode corrected.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.7.0</td>
+					<td>February 2011</td>
+					<td>
+						<ul>
+							<li>
+								<p>General</p>
+
+								<ul>
+									<li>Stored window positions outside physical screen
+										handled</li>
+									<li>Switched back to single-windows application</li>
+									<li>Main window is now fully resizeable</li>
+									<li>Hot-keys added for SCAN (F12) and FREERUN (F11)
+										buttons</li>
+									<li>Averaging function added to main diagram</li>
+									<li>Bug fixed in cable-length measurement for miniVNA type
+										analyzers</li>
+								</ul>
+							</li>
+							<li>Smith-chart in main diagram now synchronized on markers</li>
+							<li>Check for update and install feature added</li>
+							<li>Markers
+								<ul>
+									<li>Added two additional markers.</li>
+									<li>Changed marker shape from vertical line to small
+										triangles.</li>
+									<li>1st marker can be set with Left-mouse click and moved
+										with mouse-wheel.</li>
+									<li>2nd marker can be set with SHIFT-Left-mouse button and
+										moved with SHIFT-Mouse-wheel</li>
+									<li>3nd marker can be set with CTRL-Left-mouse button and
+										moved with CTRL-Mouse-wheel</li>
+									<li>4th marker can be set with SHIFT-CTRL-Left-mouse
+										button and moved with SHIFT-CTRL-Mouse-wheel</li>
+								</ul>
+							</li>
+							<li>
+								<p>Export</p>
+
+								<ul>
+									<li>Extended parameter replacement for export functions</li>
+									<li>PDF button now has option for editing comments before
+										generating document</li>
+									<li>Default name for auto-export changed to
+										&quot;VNA_{0,date,yyMMdd}_{0,time,HHmmss}&quot;.</li>
+									<li>Export format of Smith-Chart changed to GIF to avoid
+										quality issues</li>
+									<li>If TL and RL is available, this data is also exported
+										to S2P-file</li>
+								</ul>
+							</li>
+							<li>
+								<p>New scales RSS and TL added</p>
+
+								<ul>
+									<li>Scale RSS is the relative signal level for
+										transmission.</li>
+									<li>Scale TL is now always used in transmission modes.</li>
+									<li>Scale RL (former scale LOSS) is now only used in
+										reflection modes.</li>
+								</ul>
+							</li>
+							<li>
+								<p>miniVNApro</p>
+
+								<ul>
+									<li>miniVNApro has problems with scan sizes not-ending 00.
+										Resize window to get those sizes. Green hint is displayed
+										inside diagram when diagram matches.</li>
+									<li>Number of calibration samples rounded to ending 00 to
+										avoid problems.</li>
+								</ul>
+							</li>
+							<li>Some settings (scan range, scan mode, scale settings)
+								may now be saved to external file for later recall</li>
+							<li>
+								<p>Calibration</p>
+
+								<ul>
+									<li>Calibration for LOOP and SHORT splitted to avoid
+										confusion</li>
+									<li>New frequency calibration dialog. Removed
+										functionality from previous generator dialogs.</li>
+								</ul>
+							</li>
+							<li>Support for MAX6 added</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.15</td>
+					<td>21 January 2011</td>
+					<td>
+						<ul>
+							<li>miniVNA pro driver now supports variable length of
+								calibration data.</li>
+							<li>Added over scan feature for calibration data</li>
+							<li>Extended parameter replacement for export functions</li>
+							<li>Error handling enhanced when
+								rxtxSerial.dll/librxtxSerial.jnilib is not found</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.13</td>
+					<td>8 January 2011</td>
+					<td>
+						<ul>
+							<li>Updated formatter for |Z| fields, so that also values
+								&gt;1.000 are visible.</li>
+							<li>Added entry field for reference value in Smith-charts.</li>
+							<li>Provided two MS Windows batch files for application
+								launch.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.12</td>
+					<td>1 January 2011</td>
+					<td>
+						<ul>
+							<li>Updated links and manuals to new website</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.11</td>
+					<td>14 November 2010</td>
+					<td>
+						<ul>
+							<li>Bug fixed in velocity factor calculation. Thanks to
+								Colin, VE3MSC</li>
+							<li>Minimizing main window now also hides data- and
+								marker-panel</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.10</td>
+					<td>7 November 2010</td>
+					<td>
+						<ul>
+							<li>Restore of initial window layout possible</li>
+							<li>Layout handling in datapanel enhanced</li>
+							<li>In tune dialog now font also resizes to window</li>
+							<li>Initial auto-centered dialogs are now always visible on
+								screen</li>
+							<li>The decimal separator for SnP and CSV export can be
+								configured</li>
+							<li>Autoexport is now completely configurable on separate
+								dialog</li>
+							<li>Reworked marker math dialog - thanks to Erik, SM3HEW</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.9</td>
+					<td>2 November 2010</td>
+					<td>
+						<ul>
+							<li>Minor cosmetical changes</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.8</td>
+					<td>10 October 2010</td>
+					<td>
+						<ul>
+							<li>Fixed issues in cable-length dialog for miniVNA</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.7</td>
+					<td>09 October 2010</td>
+					<td>
+						<ul>
+							<li>Fixed file-extension swap for S-parameter files</li>
+							<li>Fixed issue that requested scan range is not possible by
+								miniVNA(pro)</li>
+							<li>Updated data displayed in marker math dialog</li>
+							<li>Fixed issues in cable-length dialog</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.6</td>
+					<td>15 August 2010</td>
+					<td>
+						<ul>
+							<li>SM3HEW - Erik - thanks for Swedish translation</li>
+							<li>Fixed frequency validation issue in multi-scan dialog</li>
+							<li>Schedules scans can now write also Z-Plots and
+								S-Parameter files</li>
+							<li>New auto-export feature added for on-the-fly data export
+								(each scan)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.5</td>
+					<td>18 July 2010</td>
+					<td>
+						<ul>
+							<li>Separate windows for markers and control</li>
+							<li>LF driver for miniVNA now ranges from 15kHz to 1MHz</li>
+							<li>LF driver for miniVNAPRO now ranges from 15kHz to 1MHz</li>
+							<li>Read- and open-timeout default for all serial drivers
+								set to 5s</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.4</td>
+					<td>04 July 2010</td>
+					<td>
+						<ul>
+							<li>Added toolbar icon for ZPlots export</li>
+							<li>AC6LA::Dan - Updated ZPLOTS export for +- phase values</li>
+							<li>AC6LA::Dan - Corrected SnP export for non-US locales</li>
+							<li>HG1DFB::Biro - thanks for Hungarian translations</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.3</td>
+					<td>20 June 2010</td>
+					<td>
+						<ul>
+							<li>G0POY::Andy - thanks a lot for intensive testing and
+								excellent comments !!!</li>
+							<li>OZ9MO::Jarl - enhanced usability. Added border for
+								diagram area. Changed wording in calibration dialog.</li>
+							<li>Changed DDS default frequency for miniVNA PRO from
+								500MHz to 520MHz.</li>
+							<li>Fixed saving bug on DDS-ticks.</li>
+							<li>Fixed frequency calibration issue for miniVNA.</li>
+							<li>Fixed frequency calibration issue for miniVNA PRO.</li>
+							<li>Enhanced performance of network server.</li>
+							<li>Added experimental driver for miniVNA PRO with extender.</li>
+							<li>Corrected attenuator settings in miniVNA PRO generator
+								dialog.</li>
+							<li>Fixed Q-field display problem in Marker-Math-Dialog.</li>
+							<li>Zoom with single marker visible now retains marker
+								center frequency.</li>
+							<li>Fixed right-scale color-display in color selection
+								dialog.</li>
+							<li>Selecting close-icon in tune dialog now shows message</li>
+							<li>Selecting close-icon in marker-math dialog now shows
+								message</li>
+							<li>Selecting close-icon in synced smith dialog now shows
+								message</li>
+							<li>Two more diagram sizes added</li>
+							<li>Added parameters to miniVNA driver info dialog</li>
+							<li>Added parameters to miniVNA PRO driver info dialog</li>
+							<li>AC6LA::Dan - thanks for details on S1P and S2P format</li>
+							<li>AC6LA::Dan - Corrected file-format for
+								reflection/transmission mode with ZPlots format</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>2.6.2</td>
+					<td>13 June 2010</td>
+					<td>Fixed generator problem for miniVNA.</td>
+				</tr>
+				<tr>
+					<td>2.6.1</td>
+					<td>13 June 2010</td>
+					<td>Minor fixes in multi-tune window.</td>
+				</tr>
+				<tr>
+					<td>2.6.0</td>
+					<td>24 May 2010</td>
+					<td>Copy JPG image to clipboard<br /> Location and sizes of
+						various windows are retained.
+					</td>
+				</tr>
+				<tr>
+					<td>2.5.5</td>
+					<td>13 May 2010</td>
+					<td>Initial version of marker math dialog added.<br /> Dialog
+						added for antenna tuning.
+					</td>
+				</tr>
+				<tr>
+					<td>2.5.4</td>
+					<td>08 May 2010</td>
+					<td>Fixed problem with generator support for miniVNA<br />
+						Polish and Italian translation added.
+					</td>
+				</tr>
+				<tr>
+					<td>2.5.2</td>
+					<td>04 May 2010</td>
+					<td>Removed incomplete Italian and Polish environments</td>
+				</tr>
+				<tr>
+					<td>2.5.1</td>
+					<td>03 May 2010</td>
+					<td>Added I/Q-Support for miniVNA PRO</td>
+				</tr>
+				<tr>
+					<td>2.5.0</td>
+					<td>30 April 2010</td>
+					<td>Enabled support for miniVNA PRO</td>
+				</tr>
+				<tr>
+					<td>2.4.12</td>
+					<td>24 April 2010</td>
+					<td>Corrected inverted scales in data analysis dialog.<br />
+						Smith-chart for main window is now dynamically linked to the main
+						diagram.
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.11</td>
+					<td>10 April 2010</td>
+					<td>Tracing can be now overwritten from the command line. See
+						updated user manual.<br /> Changed speed-of-light to 299792459
+						m/s for cable length measurement<br /> Application URL corrected
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.10</td>
+					<td>09 April 2010</td>
+					<td>Added formatting of input and display fields on cable
+						measurement dialog<br /> Fixed problem with not loaded
+						calibration files
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.9</td>
+					<td>26.03.2010</td>
+					<td>Compatibility with JDK1.5 added</td>
+				</tr>
+				<tr>
+					<td>2.4.8</td>
+					<td>01 April 2010</td>
+					<td>Minor correction.<br /> Fixes some issues with SUSE Linux
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.7</td>
+					<td>22 March 2010</td>
+					<td>Corrected problem with Smith-chart on Linux</td>
+				</tr>
+				<tr>
+					<td>2.4.6</td>
+					<td>21 March 2010</td>
+					<td>Analyser data can now be stored and reloaded from file<br />
+						Smith-chart available for main diagram<br /> <br /> Data
+						analysis function added to tools
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.5</td>
+					<td>20 March 2010</td>
+					<td>SWR-Scale in diagram exports is now also a logarithmic
+						scale<br /> Added export for ZPlots<br /> <br /> Added
+						experimental things. Save a scan as raw data and analyse it later.
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.4</td>
+					<td>12 March 2010</td>
+					<td>Fixed scheduler problem with multiple executed tasks<br />
+						Added search functions to swr, loss and phase marker<br /> <br />
+						Added color setup dialog for diagram area<br /> <br /> Added
+						export into S-parameter file
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.3</td>
+					<td>04 March 2010</td>
+					<td>No need to reload calibration data after switching mode if
+						data was already loaded previously.<br /> Previously loaded
+						calibration data reloaded after application restart.<br /> <br />
+						Diagram exports should now export all available data.
+					</td>
+				</tr>
+				<tr>
+					<td>2.4.2</td>
+					<td>01 March 2010</td>
+					<td>Added custom scaling and updated user manual.</td>
+				</tr>
+				<tr>
+					<td>2.4.1</td>
+					<td>28 February 2010</td>
+					<td>Added scheduler and description for scheduler to user
+						manual.</td>
+				</tr>
+				<tr>
+					<td>2.4.0</td>
+					<td>26 February 2010</td>
+					<td><br /> Shortcut for calibration loading.<br /> <br />
+						New marker panel.<br /> <br /> Automatic scaling on scales.<br />
+						<br /> Cable measurement extended.</td>
+				</tr>
+				<tr>
+					<td>2.3.2</td>
+					<td>23 February 2010</td>
+					<td>Extended description</td>
+				</tr>
+				<tr>
+					<td>2.2.1</td>
+					<td>19 February 2010</td>
+					<td>Minor corrections</td>
+				</tr>
+				<tr>
+					<td>2.2.0</td>
+					<td>18 February 2010</td>
+					<td>Generator support explained. Driver info dialog added. DDS
+						calibration explained.</td>
+				</tr>
+				<tr>
+					<td>2.1.3</td>
+					<td>17 February 2010</td>
+					<td>Added first version of sample section Added hints and tips
+						section. Statusbar updated.</td>
+				</tr>
+				<tr>
+					<td>2.1.0</td>
+					<td>15 February 2010</td>
+					<td>Update new logic for calibration. Extended overview</td>
+				</tr>
+				<tr>
+					<td>2.0.2</td>
+					<td>14 February 2010</td>
+					<td>Updated for new GUI and functions</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<h1>Credits</h1>
+
+	<div style="margin-left: 30px;">
+		<table border="1" rules="groups" summary="blubb">
+			<tbody>
+				<tr>
+					<th>Topic</th>
+					<th>Comment</th>
+				</tr>
+				<tr>
+					<td><a href="http://www.eclipse.org">ECLIPSE </a></td>
+					<td>Used for developing and testing vna/J.</td>
+				</tr>
+				<tr>
+					<td><a
+						href="http://www.sparetimelabs.com/purejavacomm/index.html">PureJavaComm
+					</a></td>
+					<td>Excellent JNA-based library used for access to the serial
+						ports across multiple platforms.</td>
+				</tr>
+				<tr>
+					<td><a href="http://commons.apache.org/">Apache Commons </a></td>
+					<td>Basic reusable JAVA components.</td>
+				</tr>
+				<tr>
+					<td><a href="http://poi.apache.org/">Apache POI </a></td>
+					<td>Java API for creation of Microsoft Documents, here EXCEL
+						worksheet.</td>
+				</tr>
+				<tr>
+					<td><a href="http://www.sauronsoftware.it/projects/cron4j/">Cron4J
+					</a></td>
+					<td>A scheduler for the Java platform which is very similar to
+						the UNIX cron daemon.</td>
+				</tr>
+				<tr>
+					<td><a href="http://www.jfree.org/jfreechart/">JFreeChart
+					</a></td>
+					<td>A free 100% Java chart library that makes it easy for
+						developers to display professional quality charts in applications.</td>
+				</tr>
+				<tr>
+					<td><a href="http://www.miniradiosolutions.com/">mRS </a></td>
+					<td>Providing these tiny blue boxes ...</td>
+				</tr>
+				<tr>
+					<td><a
+						href="https://github.com/DiegoCatalano/Catalano-Framework">DiegoCatalano
+							Framework</a></td>
+					<td>For the Gaussian class</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

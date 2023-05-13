@@ -1,0 +1,85 @@
+<html>
+<title></title>
+<body bgcolor="#CCFFFF">
+	<h1>Help on Calibration</h1>
+	<p>There are four diagram areas on this dialog. Depending of the
+		selected mode and analyzer type, one or more diagram areas are enabled
+		for usage.</p>
+	<p>For every visible diagram, a measurement must be made to create
+		a valid main calibration dataset. When all the required calibration
+		data has been created, the SAVE button gets enabled and the UPATE
+		button receives a green background to indicate, that a complete main
+		calibration dataset is now recorded.</p>
+	<p>The created main calibration dataset can now be used in the
+		application by simply pressing the UPDATE button, which will also
+		close the dialog. If one or more curves do not match the expectations
+		simply rerun the needed calibration by pressing the button below the
+		diagram again.</p>
+	<p>When closing the dialog using the UPDATE button, the calibration
+		status in the status bar is updated.</p>
+	<h2>Overscan</h2>
+	<p>To get smoother scans when the measured object s resistance is
+		near one of the calibration references (means i.e. the measured
+		resistance is 50Ohm real which is identical with the reference value
+		50Ohm) an over scan feature was added.</p>
+	<p>In the calibration dialog exists an input field , where the
+		number of scans can be entered. This number of scans is executed when
+		the readXXX button is pressed. The calibration curve used is the
+		arithmetic mean of all scans executed. The higher the number, the
+		smoother the calibration data is.</p>
+	<h3>Remark</h3>
+	<p>The time needed to create a i.e. 5x over scan is about 5 times
+		the duration needed for a 1x over scan. The resulting calibration data
+		file contains no information how many over scans where used during
+		creation</p>
+	<h2>Scan mode</h2>
+	<p>Starting with release 2.8.5d of vna/J there are two modes for
+		the calibration.
+	<h3>Mode 1</h3>
+	<p>Depending on the analyzer type, the maximum scan range of the
+		analyzer is divided into 1 or more ranges with different number of
+		calibration steps. This results in enhanced resolution in these scan
+		ranges.
+	<p>
+	<h3>Mode 2</h3>
+	<p>This mode uses a fixed number of calibration steps in maximum
+		scan range of the analyzer. For some analyzer types, the number of
+		steps can be changed in the driver info dialog.</p>
+	<h3>User-definedy</h3>
+	<p>These scan ranges can be changed by the user by editing a simple
+		text file. The driver specific text-file is created when the
+		calibration dialog is first opened. The filename depends on the
+		short-name of the driver. The file is located in the preset directory
+		of vna/J. The text-file must contain lines with exactly this format:</p>
+	<p>[start-frequency]blank[stop-frequency]blank[number of
+		steps]blank[#overscan]</p>
+	<ul>
+		<li>The frequency must be within the range of the driver. You can
+			check the minimum and maximum frequency in the driver info dialog.
+			The frequency values must be in Hertz.</li>
+		<li>The ranges must cover the complete frequency range of the
+			driver.</li>
+		<li>The number of steps must be within the range of 10 and
+			30.000.</li>
+		<li>The number of overscan must be between 1 and 10</li>
+		<li>The ranges must be listed in ascending order</li>
+		<li>The ranges must contain no gaps and no overlap</li>
+
+	</ul>
+	<h3>Sample for miniVNApro</h3>
+	<ul>
+		<li>100000 999999 4000 1</li>
+		<li>1000000 9999999 4000 1</li>
+		<li>10000000 29999999 10000 1</li>
+		<li>30000000 200000000 10000 1</li>
+	</ul>
+	<h3>Sample for miniVNA tiny</h3>
+	<ul>
+		<li>1000000 30999999 10000 2</li>
+		<li>31000000 3000000000 10000 1</li>
+	</ul>
+	<h3>Hint</h3>
+	<p>If you get stuck in using these user-defined scan ranges, simply
+		delete the corresponding file in the preset folder of vna/J</p>
+</body>
+</html>

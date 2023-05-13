@@ -1,0 +1,165 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      General
+    </h2>
+    <p>
+      Since version 2.7 of vna/J a procedure is established, to enable the user to check for new versions and optional
+      download all files required for the new version into a selected directory
+    </p>
+    <p>
+      The update function didn't send any data to the internet!
+    </p>
+    <p>
+      The update function only loads the file mentioned in the field
+      <em>
+        Webseite
+      </em>
+      and analyses its content.
+    </p>
+    <p>
+      This file is downloaded, when the Check button is pressed.
+    </p>
+    <h2>
+      Fields
+    </h2>
+    <h3>
+      Update site
+    </h3>
+    <p>
+      This is the URL of the version information file on the update server.
+    </p>
+    <h3>
+      Installed version
+    </h3>
+    <p>
+      This is the currently running version of vna/J.
+    </p>
+    <h3>
+      Available version
+    </h3>
+    <p>
+      This is the version of vna/J on the update server.
+    </p>
+    <h3>
+      Comment
+    </h3>
+    <p>
+      A short comment for the new version.
+    </p>
+    <h3>
+      Contained files
+    </h3>
+    <p>
+      A list of all files required for the version on the update server. Filesize is initially displayed as -1. The
+      effective filesize is shown, during download. The progress of the file download is shown in the status column.
+    </p>
+    <p>
+      If the checkbox
+      <em>
+        Complete
+      </em>
+      is set, all files, even those currently not needed for the used operating system are downloaded in the selected
+      installation directory. If the checkbox
+      <em>
+        Complete
+      </em>
+      is not set, only those files needed for the current operationg system are downloaded.
+    </p>
+    <p>
+      This checkbox works from V2.7.3 onwards!
+    </p>
+
+    <h3>
+      Installation directory
+    </h3>
+    <p>
+      This is the selected directory for the downloaded files.
+      <em>
+
+        Do NOT use the current directory, in which vna/J is running. Select a different directory. All required files
+        for the new version will be downloaded to this directory. The current installation will not be touched. You can
+        use the
+        <b>
+          PROPOSE
+        </b>
+        -button to build a new directory name.
+      </em>
+    </p>
+    <h2>
+      Buttons
+    </h2>
+    <h3>
+      Check
+    </h3>
+    <p>
+      Download the file displayed in the update-site field and display its content.
+    </p>
+    <h3>
+      Propose
+    </h3>
+    <p>
+      Build a directory name based on the directory of the currently running application and the new version number
+    </p>
+    <p>
+      Assume current application is running in
+      <em>
+        c:/program files/vnaJ/2.6.15
+      </em>
+      and the available update version is
+      <em>
+        2.7.0q
+      </em>
+      then the proposed directory name would be
+      <em>
+        c:/program files/vnaJ/2.7.0q.
+      </em>
+    </p>
+    <h3>Complete</h3>
+    <p>Selecting this checkbox, downloads all files, regardless of the current operation system running.</p>
+    <p>Unchecking this box, downloads only those files, which are required for the current running operation system.</p>
+    <h3>
+      Search
+    </h3>
+    <p>
+      Opens a directory selection dialog. Here the location for all downloaded files can be selected. Also creation of
+      new directories is supported.
+    </p>
+    <h3>
+      Close
+    </h3>
+    <p>
+      Closes this dialog.
+    </p>
+    <h3>
+      Help
+    </h3>
+    <p>
+      This help.
+    </p>
+    <h3>
+      Abort
+    </h3>
+    <p>
+      This button is only enabled, when downloads are running. Clicking this button cancels the current and all further downloads.
+    </p>
+    <h3>
+      Install
+    </h3>
+    <p>
+      This button is enabled, if the vna/J version on the update site is newer then the currently running vna/J version.
+    </p>
+    <p>
+      Pressing this button downloads all files displayed in the
+      <em>
+        List of contained files
+      </em>
+      to the directory displayed in field
+      <em>
+        Installation directory
+      </em>
+    </p>
+  </body>
+</html>

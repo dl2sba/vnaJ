@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project vna-j with Jar-in-Jar Loader">
+
+	<property name="targetDir" location="c:/temp/miniVNAPRO" />
+	<property name="RXTXLib" location="../Java Comm Lib GNU 2.2pre2" />
+	<property name="DRIVERXML" location="drivers.xml" />
+	<property name="DRIVERBIN" location="drivers.bin" />
+	
+	<path id="run.classpath">
+		<pathelement location="../vna-j-crypto/bin" />
+		<pathelement location="../vna-j/bin" />
+	</path>
+	
+	<target name="create_run_jar" depends="encryptDriver">
+		<mkdir dir="${targetDir}" />
+
+		<loadproperties>
+			<file file="../vna-j/src/krause/vna/resources/VNAMessage.properties" />
+			<filterchain>
+				<linecontains>
+					<contains value="Application." />
+				</linecontains>
+			</filterchain>
+		</loadproperties>
+
+		<copy todir="${targetDir}" file="${DRIVERBIN}" />
+
+		<jar destfile="${targetDir}/vnaJ.${Application.version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader" />
+				<attribute name="Rsrc-Main-Class" value="krause.vna.gui.VNAMain" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Rsrc-Class-Path" value="./ cron4j-2.2.1.jar RXTXcomm.jar jcommon-1.0.16.jar jfreechart-1.0.13.jar poi-3.5-FINAL-20090928.jar iText-2.1.7.jar beansbinding-1.2.1.jar commons-lang-2.4.jar commons-math-2.0.jar" />
+			</manifest>
+			<fileset dir="../vna-j/bin" />
+			<fileset dir="../SwingWorker/bin" />
+			<fileset dir="../vna-j-minivna/bin" />
+			<fileset dir="../vna-j-minivna-lf/bin" />
+			<fileset dir="../vna-j-minivnapro/bin" />
+			<fileset dir="../vna-j-sampledriver/bin" />
+
+			<zipfileset src="jar-in-jar-loader.zip" />
+			<zipfileset dir="../Cron4J/lib" includes="cron4j-2.2.1.jar" />
+			<zipfileset dir="${RXTXLib}" includes="RXTXcomm.jar" />
+			<zipfileset dir="../JFreeChart/lib" includes="jcommon-1.0.16.jar" />
+			<zipfileset dir="../JFreeChart/lib" includes="jfreechart-1.0.13.jar" />
+			<zipfileset dir="../iText/lib" includes="iText-2.1.7.jar" />
+			<zipfileset dir="../Apache POI/lib" includes="poi-3.5-FINAL-20090928.jar" />
+			<zipfileset dir="../Apache Commons/lib" includes="commons-lang-2.4.jar" />
+			<zipfileset dir="../Apache Commons/lib" includes="commons-math-2.0.jar" />
+			<zipfileset dir="../vna-j" includes="beansbinding-1.2.1.jar" />
+		</jar>
+	</target>
+	<target name="encryptDriver">
+		<java classname="krause.vna.device.util.encrypt.EncodeDriverXML" classpathref="run.classpath">
+			<arg file="${DRIVERXML}" />
+			<arg file="${DRIVERBIN}" />
+		</java>
+	</target>
+</project>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="all" name="Create Runnable Jar for Project vna-j with Jar-in-Jar Loader">
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" />
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+
+	<target name="version.xml">
+		<xmltask source="version.xml" dest="${versionFile}">
+			<replace path="vnaJ/version/text()" withText="${Application.version}" />
+			<replace path="vnaJ/comment/text()" withText="vna/J for MAX6, version ${Application.version}" />
+		</xmltask>
+		<for list="${Batch1},${Batch2},${Batch3}" param="file">
+			<sequential>
+				<xmltask source="${versionFile}" dest="${versionFile}">
+					<insert path="vnaJ/files[last()]">
+						<![CDATA[<file>
+						<remote>${downloadURL}/@{file}</remote>
+						<local>@{file}</local>
+						<platform>WINDOWS</platform>
+					</file>]]></insert>
+			</xmltask>
+		</sequential>
+	</for>
+	<xmltask source="${versionFile}" dest="${versionFile}">
+		<insert path="vnaJ/files[last()]">
+			<![CDATA[<file>
+			<remote>${downloadURL}/${JarFile}</remote>
+			<local>${JarFile}</local>
+			<type>JAR</type>
+		</file>]]></insert>
+</xmltask>
+<xmltask source="${versionFile}" dest="${versionFile}">
+	<insert path="vnaJ/files[last()]">
+		<![CDATA[<file>
+		<remote>${downloadURL}/${Readme}</remote>
+		<local>${Readme}</local>
+		<type>README</type>
+	</file>]]></insert>
+</xmltask>
+</target>
+
+<target name="init">
+<loadproperties>
+<file file="../vna-j/src/krause/vna/resources/VNAMessage.properties" />
+<filterchain>
+	<linecontains>
+		<contains value="Application." />
+	</linecontains>
+</filterchain>
+</loadproperties>
+
+<property name="targetDir" location="c:/temp/MAX6.${Application.version}" />
+<mkdir dir="${targetDir}" />
+
+<property name="versionFile" location="${targetDir}/version.2.7.xml" />
+<property name="downloadURL" value="http://download.dl2sba.com/max6/${Application.version}" />
+
+<property name="JarFile" value="MAX6.${Application.version}.jar" />
+<property name="Batch1" value="start_vnaJ_echo.cmd" />
+<property name="Batch2" value="start_vnaJ_LocalDir.cmd" />
+<property name="Batch3" value="start_vnaJ.cmd" />
+<property name="Readme" value="readme.${Application.version}.html" />
+
+</target>
+
+<target name="SysDLL">
+<copy todir="${targetDir}" file="index.php" />
+</target>
+
+<target name="Batch1">
+<echo file="${targetDir}/${Batch1}" append="false" message="" />
+<echo file="${targetDir}/${Batch1}" append="true" message="@echo off                                    ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="rem (c) DL2SBA 2011                          ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="if not exist ${JarFile} goto err1            ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="java -jar ${JarFile}                         ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message=":err1                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="echo !!! ------------------------------------${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="echo !!! program file ${JarFile} missing     ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="echo !!! aborting                            ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="pause                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch1}" append="true" message=":end                                         ${line.separator}" />
+</target>
+
+<target name="Batch2">
+<echo file="${targetDir}/${Batch2}" append="false" message="" />
+<echo file="${targetDir}/${Batch2}" append="true" message="@echo off                                    ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="rem (c) DL2SBA 2011                          ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="if not exist ${JarFile} goto err1            ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="java -Duser.home=./ -Duser.language=en -Duser.region=US -jar ${JarFile}${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message=":err1                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="echo !!! ------------------------------------${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="echo !!! program file ${JarFile} missing     ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="echo !!! aborting                            ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="pause                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch2}" append="true" message=":end                                         ${line.separator}" />
+</target>
+
+<target name="Batch3">
+<echo file="${targetDir}/${Batch3}" append="false" message="" />
+<echo file="${targetDir}/${Batch3}" append="true" message="@echo off                                    ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="rem (c) DL2SBA 2011                          ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="if not exist ${JarFile} goto err1            ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="start javaw -jar ${JarFile}                  ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message=":err1                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="echo !!! ------------------------------------${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="echo !!! program file ${JarFile} missing     ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="echo !!! aborting                            ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="pause                                        ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="goto end                                     ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message="                                             ${line.separator}" />
+<echo file="${targetDir}/${Batch3}" append="true" message=":end                                         ${line.separator}" />
+</target>
+
+<target name="createApplication" depends="init,SysDLL,Batch1,Batch2,Batch3">
+<copy tofile="${targetDir}/${Readme}" file="../vna-j/src/krause/vna/resources/readme.html" />
+
+<jar destfile="${targetDir}/${JarFile}">
+<manifest>
+	<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader" />
+	<attribute name="Rsrc-Main-Class" value="krause.vna.gui.VNAMain" />
+	<attribute name="Class-Path" value="." />
+	<attribute name="Rsrc-Class-Path" value="./ jdom.jar forms-1.2.1.jar miglayout15-swing.jar cron4j-2.2.1.jar jcommon-1.0.16.jar jfreechart-1.0.13.jar poi-3.5-FINAL-20090928.jar iText-2.1.7.jar beansbinding-1.2.1.jar commons-lang-2.4.jar commons-math-2.0.jar jna.jar" />
+</manifest>
+<fileset dir="../krause-common/bin" />
+<fileset dir="../PureJavaComm/bin" />
+<fileset dir="../SwingWorker/bin" />
+<fileset dir="../vna-j/bin" />
+<fileset dir="../vna-j-help/bin" />
+<fileset dir="../vna-j-max6/bin" />
+<fileset dir="../vna-j-max6-500/bin" />
+<fileset dir="../vna-j-sampledriver/bin" />
+
+<zipfileset src="jar-in-jar-loader.zip" />
+<zipfileset dir="../Cron4J/lib" includes="cron4j-2.2.1.jar" />
+<zipfileset dir="../PureJavaComm/lib" includes="jna.jar" />
+<zipfileset dir="../JDOM 1.1.1/lib" includes="jdom.jar" />
+<zipfileset dir="../JFreeChart/lib" includes="jcommon-1.0.16.jar" />
+<zipfileset dir="../JFreeChart/lib" includes="jfreechart-1.0.13.jar" />
+<zipfileset dir="../iText/lib" includes="iText-2.1.7.jar" />
+<zipfileset dir="../Apache POI/lib" includes="poi-3.5-FINAL-20090928.jar" />
+<zipfileset dir="../Apache Commons/lib" includes="commons-lang-2.4.jar" />
+<zipfileset dir="../Apache Commons/lib" includes="commons-math-2.0.jar" />
+<zipfileset dir="../vna-j" includes="forms-1.2.1.jar" />
+<zipfileset dir="../vna-j" includes="miglayout15-swing.jar" />
+</jar>
+</target>
+<target name="md5">
+<echo>Createing MD5 checksums ...</echo>
+<checksum>
+<fileset dir="${targetDir}">
+	<include name="*.*" />
+</fileset>
+</checksum>
+</target>
+
+<target name="all" depends="createApplication,version.xml">
+<echo>Created installation package !!! </echo>
+</target>
+</project>

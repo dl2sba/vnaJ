@@ -1,0 +1,2 @@
+Erzeugen neue Länderproperties
+grep -v ".Command=" VNAMessage.properties | grep -v ".Key=" | grep -v ".Image=" > VNAMessage_hu.properties

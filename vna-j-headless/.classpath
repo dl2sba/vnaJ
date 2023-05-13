@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/krause-common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-libs"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-max6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-max6-500"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-megaload"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-metrovna"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivna"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivna-lf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnapro"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnapro-lf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnaproext"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-sampledriver"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-tinyvna"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/PureJavaComm"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

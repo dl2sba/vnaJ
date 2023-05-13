@@ -1,0 +1,151 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h1>
+      Help on AUTO-Export settings
+    </h1>
+    <h2>
+      General
+    </h2>
+    <p>
+
+    </p>
+    <p>
+    </p>
+    <h2>
+      Outputfile
+    </h2>
+    <h3>
+      Inputfield Filename
+    </h3>
+    <p>
+      Here you can enter a template for the filename of the exported data.
+    </p>
+    <p>
+      These variables are supported:
+    </p>
+    <dl>
+      <dt>
+      {0}
+    </dt>
+    <dd>
+    The current date/time is inserted here.
+  </dd>
+  <dt>
+  {1}
+</dt>
+<dd>
+The currently selected scan mode of the analyzer.
+</dd>
+<dt>
+{2}
+</dt>
+<dd>
+The shortname of the selected analyzer.
+</dd>
+<dt>
+{3}
+</dt>
+<dd>
+The longname of the selected analyzer.
+</dd>
+<dt>
+{4}
+</dt>
+<dd>
+Start frequency of scan. Thousand separators are displayed.
+</dd>
+<dt>
+{5}
+</dt>
+<dd>
+Stop frequency of scan. No separators are displayed.
+</dd>
+<dt>
+{6}
+</dt>
+<dd>
+Start frequency of scan. Thousand separators are displayed.
+</dd>
+<dt>
+{7}
+</dt>
+<dd>
+Stop frequency of scan. No separators are displayed.
+</dd>
+<dt>
+{8}
+</dt>
+<dd>
+Number of samples used for this scan.
+</dd>
+<dt>
+{9}
+</dt>
+<dd>
+The number of scans used to generate data (not supported yet).
+</dd>
+<dt>
+{10}
+</dt>
+<dd>
+The number of samples in the calibration dataset.
+</dd>
+<dt>
+{11}
+</dt>
+<dd>
+The number of scans used to generate the calibration dataset.
+</dd>
+<dt>
+{12}
+</dt>
+<dd>
+Name if the calibration dataset.
+</dd>
+<dt>
+{13}
+</dt>
+<dd>
+The name of the currently logged on user in the operation.
+</dd>
+
+</dl>
+<h3>
+  Checkbox Overwrite
+</h3>
+<p>
+  If the export files already exists and the checkbox is selected, the existing file is automatically overwritten. If
+  the checkbox is not selected, a warning message is shown.
+</p>
+<h3>
+  Button Search
+</h3>
+<p>
+  Clicking the search buttons opens a directoy selection dialog, in which the user can select the directory for the
+  exported files.
+</p>
+<h2>
+  Headline
+</h2>
+<p>
+  This Headline is printed above the diagram area in JPG- and PDF-Export. The same replacement parameters as for the
+  filename fields are supported.
+</p>
+<h2>
+  Comment
+</h2>
+<p>
+  This comment is printed below the diagram area in the exported PDF-document. The same replacement parameters as for
+  the filename fields are supported. The comment is printed with a fixed-sized font, so simple formatting can be used.
+</p>
+<h2>
+  Decimal separator
+</h2>
+<p>
+  Usually the decimal separator is selected based on the operation system settings. For the export in S-parameter
+  format, the decimal separator used can be selected here.
+</p>
+</body>
+</html>

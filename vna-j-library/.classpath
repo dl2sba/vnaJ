@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/krause-common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/PureJavaComm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-metrovna"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivna"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivna-lf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnapro"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnapro-lf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-minivnaproext"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-tinyvna"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vna-j-vnarduino"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

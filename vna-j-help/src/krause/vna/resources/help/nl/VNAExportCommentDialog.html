@@ -1,0 +1,533 @@
+<html>
+  <title>
+  </title>
+  <body bgcolor="#CCFFFF">
+    <h2>
+      Algemeen
+    </h2>
+    <p>
+      Hier kunnen de algemene parameters, de kopregel en het commentaarveld in het te exporteren document aangepast worden.
+    </p>
+    <h2>
+      Kopregel
+    </h2>
+    <p>
+      De kopregel wordt afgedrukt boven het diagramgebied bij JPG en PDF-export. Dezelfde vervangparameters als voor de 
+      bestandsnaamvelden worden ondersteund.
+    </p>
+    <h2>
+      Commentaar
+    </h2>
+    <p>
+      Dit commentaar wordt geprint onder het diagramgebied in het te exporteren PDF-document. Dezelfde vervangparameters als voor de 
+      bestandsnaamvelden worden ondersteund. Het commentaar wordt geprint met een fixed-sized font, hierdoor wordt simpele formatting
+      mogelijk.
+    </p>
+    <h2>
+      Ondersteunde variabelen
+    </h2>
+    <p>
+      De navolgende variabelen worden ondersteund:
+    </p>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr>
+          <td>
+            {0}
+          </td>
+          <td>
+		    De huidige datum en tijd wordt hier ingevoerd. Meer hierover in volgend hoofdstuk. 
+          </td>
+		</tr>
+        <tr>
+          <td>
+            {1}
+          </td>
+          <td>
+            De huidig geselecteerde scanmode van de analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {2}
+          </td>
+          <td>
+            De verkorte naam van de geselecteerde analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {3}
+          </td>
+          <td>
+            De lange naam van de geselecteerde analyser.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {4}
+          </td>
+          <td>
+            Startfrequentie van de scan. Duizend separatoren worden vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {5}
+          </td>
+          <td>
+            Stopfrequentie van de scan. Er worden geen separatoren vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {6}
+          </td>
+          <td>
+            Startfrequentie van de scan. Duizend separatoren worden vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {7}
+          </td>
+          <td>
+            Stopfrequentie van de scan. Er worden geen separatoren vertoond.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {8}
+          </td>
+          <td>
+            Aantal gebruikte samples voor deze scan.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {9}
+          </td>
+          <td>
+            Het aantal gebruikte scans voor het genereren van de data (nog niet ondersteund).
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {10}
+          </td>
+          <td>
+            Het aantal samples in de calibratiedataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {11}
+          </td>
+          <td>
+            Het aantal gebruikte scans voor het genereren van de calibratiedataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {12}
+          </td>
+          <td>
+            Naam als de calibratiedataset.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {13}
+          </td>
+          <td>
+            De naam van de huidig ingelogde gebruiker.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>
+      Datum formatting
+    </h2>
+    <div style="margin-left:20px;">
+      <table border=0 cellspacing=3 cellpadding=0 summary="">
+        <tr bgcolor="#ccccff">
+          <th align=left>
+            Letter
+          </th>
+          <th align=left>
+            Datum- of tijdcomponent
+          </th>
+          <th align=left>
+            Presentatie
+          </th>
+          <th align=left>
+            Voorbeelden
+          </th>
+          <tr>
+            <td>
+              <code>
+                G
+              </code>
+            </td>
+            <td>
+              Era designator
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                AD
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                y
+              </code>
+            </td>
+            <td>
+              Jaar
+            </td>
+            <td>
+              Jaar
+            </td>
+            <td>
+              <code>
+                1996
+              </code>
+              ;
+              <code>
+                96
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                M
+              </code>
+            </td>
+            <td>
+              Maand van het jaar
+            </td>
+            <td>
+              Maand
+            </td>
+            <td>
+              <code>
+                Juli
+              </code>
+              ;
+              <code>
+                Jul
+              </code>
+              ;
+              <code>
+                07
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                w
+              </code>
+            </td>
+            <td>
+              Week van het jaar
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                27
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                W
+              </code>
+            </td>
+            <td>
+              Week in de maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                D
+              </code>
+            </td>
+            <td>
+              Dag in het jaar
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                189
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                d
+              </code>
+            </td>
+            <td>
+              Dag in de maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                10
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                F
+              </code>
+            </td>
+            <td>
+              Dag van de week in maand
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                2
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                E
+              </code>
+            </td>
+            <td>
+              Dag in de week
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                Dinsdag
+              </code>
+              ;
+              <code>
+                Din
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                a
+              </code>
+            </td>
+            <td>
+              Am/pm marker /
+            </td>
+            <td>
+              Tekst
+            </td>
+            <td>
+              <code>
+                PM
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              H
+            </td>
+            <td>
+              Uur van de dag (0-23)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                k
+              </code>
+            </td>
+            <td>
+              Uur van de dag (1-24)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                24
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                K
+              </code>
+            </td>
+            <td>
+              Uur in am/pm (0-11)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                0
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                h
+              </code>
+            </td>
+            <td>
+              Uur in am/pm (1-12)
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                12
+              </code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>
+                m
+              </code>
+            </td>
+            <td>
+              Minuut in uur
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                30
+              </code>
+            </td>
+          </tr>
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                s
+              </code>
+            </td>
+            <td>
+              Seconde in minuut
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                55
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                S
+              </code>
+            </td>
+            <td>
+              Milliseconde
+            </td>
+            <td>
+              Nummer
+            </td>
+            <td>
+              <code>
+                978
+              </code>
+            </td>
+          </tr>
+
+          <tr bgcolor="#88FFFF">
+            <td>
+              <code>
+                z
+              </code>
+            </td>
+            <td>
+              Tijdzone
+            </td>
+            <td>
+              Algemene tijdzone
+            </td>
+            <td>
+              <code>
+                Pacific Standaard Tijd
+              </code>
+              ;
+              <code>
+                PST
+              </code>
+              ;
+              <code>
+                GMT-08:00
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                Z
+              </code>
+            </td>
+            <td>
+              Tijdzone
+            </td>
+            <td>
+              RFC 822 tijdzone
+            </td>
+            <td>
+              <code>
+                -0800
+              </code>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </body>
+  </html>
